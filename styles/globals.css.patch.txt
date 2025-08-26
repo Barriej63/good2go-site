@@ -1,0 +1,2 @@
+/* Add this to styles/globals.css if not present */
+.page-actions { margin-top: 16px; }
