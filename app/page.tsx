@@ -1,11 +1,31 @@
-export default function Home(){
-  return (<section className="hero">
-    <h1 style={{fontSize:42, margin:0}}>Concussion Monitoring that’s easy to run and easy to trust.</h1>
-    <p className="small">Science-backed assessments, clear results, and a booking flow that just works.</p>
-    <p><a className="btn" href="https://book.good2go-rth.com/book">Book a Test</a></p>
-    <div className="grid">
-      <div className="card"><h3>Why Good2Go?</h3><p>Objective, repeatable assessments with fast turnaround.</p></div>
-      <div className="card"><h3>What’s Included</h3><p>Baseline + post-injury testing, easy scheduling, and clinician-ready output.</p></div>
-      <div className="card"><h3>How It Works</h3><p>Book → Assess → Automated analysis → Results to your dashboard.</p></div>
-    </div></section>);
+
+export default function Page() {
+  return (
+    <section className="hero">
+      <h1>Concussion Testing That’s Good-to-Go</h1>
+      <p>
+        Book a baseline or post-concussion assessment in minutes. Our streamlined process helps
+        athletes, parents, and coaches make better return-to-head decisions with confidence.
+      </p>
+      <p style={{ marginTop: 16 }}>
+        <a href="https://book.good2go-rth.com/book" className="cta primary">Book Now</a>
+        {' '}
+        <a href="/how-it-works" className="cta">How it works</a>
+      </p>
+      <div className="grid">
+        <div className="card">
+          <h3>Evidence-informed</h3>
+          <p>Built from best-practice protocols with continuous improvement.</p>
+        </div>
+        <div className="card">
+          <h3>Fast booking</h3>
+          <p>Choose a region and time slot — instant confirmation is sent to your email.</p>
+        </div>
+        <div className="card">
+          <h3>Easy to understand</h3>
+          <p>Clear results and next steps for athletes, parents, and providers.</p>
+        </div>
+      </div>
+    </section>
+  );
 }
