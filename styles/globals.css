@@ -4,5 +4,5 @@
 
 :root { color-scheme: light; }
 html, body { height: 100%; }
-/* Legacy helper retained for pages */
+.prose-muted { color: rgb(82,82,91); }
 .page-actions { margin-top: 16px; }

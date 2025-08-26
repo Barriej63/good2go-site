@@ -3,11 +3,11 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 
 export const metadata = {
-  title: 'Good2Go — Concussion Baseline & Return-to-Head Testing',
-  description: 'Book a Good2Go test. Evidence-informed concussion monitoring with simple booking.',
+  title: 'Good2Go — Evidence‑Informed Concussion Monitoring',
+  description: 'Objective dual‑task gait assessment and decision support to guide safe return‑to‑activity.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: { children: React.ReactNode }){
   return (
     <html lang="en">
       <body className="antialiased text-zinc-900">
