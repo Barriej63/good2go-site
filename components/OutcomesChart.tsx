@@ -1,39 +1,45 @@
+'use client';
+import React from 'react';
+import { Line } from 'react-chartjs-2';
+import 'chart.js/auto';
 
-"use client";
+type Props = {
+  labels?: string[];
+  series?: number[];
+  title?: string;
+};
 
-import { useEffect, useRef } from "react";
-import Chart from "chart.js/auto";
+export default function OutcomesChart({ labels, series, title = 'Outcomes' }: Props) {
+  const safeLabels = labels ?? ['Week 1','Week 2','Week 3','Week 4','Week 5'];
+  const safeSeries = series ?? [2, 4, 3, 6, 7];
 
-export default function OutcomesChart() {
-  const ref = useRef<HTMLCanvasElement | null>(null);
+  const data = {
+    labels: safeLabels,
+    datasets: [
+      {
+        label: 'Score',
+        data: safeSeries,
+        tension: 0.3,
+        fill: false,
+      }
+    ]
+  };
 
-  useEffect(() => {
-    if (!ref.current) return;
-    const ctx = ref.current.getContext("2d");
-    if (!ctx) return;
-
-    const chart = new Chart(ctx, {
-      type: "line",
-      data: {
-        labels: ["Week 1", "Week 2", "Week 3", "Week 4"],
-        datasets: [
-          { label: "Gait Speed", data: [0.8, 0.92, 1.05, 1.1], fill: false },
-          { label: "Balance Score", data: [62, 68, 74, 79], fill: false },
-        ],
-      },
-      options: {
-        responsive: true,
-        plugins: { legend: { display: true } },
-        scales: { y: { beginAtZero: false } },
-      },
-    });
-
-    return () => chart.destroy();
-  }, []);
+  const options = {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: true },
+      title: { display: !!title, text: title }
+    },
+    scales: {
+      y: { beginAtZero: true }
+    }
+  } as const;
 
   return (
-    <div className="rounded-xl border border-slate-200 p-4">
-      <canvas ref={ref} height={240} />
+    <div className="w-full h-64">
+      <Line data={data} options={options} />
     </div>
   );
 }

@@ -1,6 +1,14 @@
 'use client';
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+
+// Inline SVG menu icon to avoid external icon libraries
+const MenuIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
+    <line x1="3" y1="12" x2="21" y2="12"></line>
+    <line x1="3" y1="6" x2="21" y2="6"></line>
+    <line x1="3" y1="18" x2="21" y2="18"></line>
+  </svg>
+);
 
 export default function Header() {
   return (
@@ -13,7 +21,7 @@ export default function Header() {
           <Link href="/contact" className="text-sm hover:underline">Contact</Link>
         </nav>
         <button aria-label="Open menu" className="md:hidden p-2 rounded hover:bg-gray-100">
-          <Menu size={20} />
+          <MenuIcon />
         </button>
       </div>
     </header>
