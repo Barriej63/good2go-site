@@ -1,40 +1,18 @@
 'use client';
-import React from 'react';
 import { Line } from 'react-chartjs-2';
-import 'chart.js/auto';
+import {
+  Chart as ChartJS, LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend,
+} from 'chart.js';
+ChartJS.register(LineElement, CategoryScale, LinearScale, PointElement, Tooltip, Legend);
 
-type Props = {
-  labels?: string[];
-  series?: number[];
-  title?: string;
-};
-
-export default function OutcomesChart({
-  labels = ['W1','W2','W3','W4','W5'],
-  series = [2, 3, 4, 3, 5],
-  title = 'Outcomes'
-}: Props) {
+export default function OutcomesChart() {
   const data = {
-    labels,
+    labels: ['Week 1', '2', '3', '4', '5', '6'],
     datasets: [
-      {
-        label: 'Score',
-        data: series,
-        tension: 0.3,
-        fill: false
-      }
-    ]
+      { label: 'Gait Speed (m/s)', data: [0.8, 0.92, 1.0, 1.06, 1.12, 1.15], tension: 0.35, pointRadius: 2.5 },
+      { label: 'Double-Support (%)', data: [34, 31, 28, 26, 24, 23], tension: 0.35, pointRadius: 2.5 },
+    ],
   };
-
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: true },
-      title: { display: !!title, text: title }
-    },
-    scales: { y: { beginAtZero: true } }
-  } as const;
-
-  return <div style={{height:260}}><Line data={data} options={options} /></div>;
+  const options = { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: true } }, scales: { x: { grid: { display: false } }, y: { grid: { display: false } } } } as const;
+  return <Line data={data} options={options} />;
 }
