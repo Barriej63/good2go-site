@@ -1,16 +1,11 @@
-import Image from 'next/image';
-export default function Footer(){
+export default function Footer() {
   return (
-    <footer className="border-t border-zinc-200 bg-white mt-16">
-      <div className="mx-auto max-w-6xl px-4 py-8 grid gap-6 md:grid-cols-2 items-center">
-        <div className="flex items-center gap-3">
-          <Image src="/logo-black.svg" alt="Good2Go" width={28} height={28} />
-          <div className="text-sm text-zinc-600">© {new Date().getFullYear()} Good2Go — Return‑to‑Head</div>
-        </div>
-        <div className="text-sm text-zinc-600 md:text-right">
-          <a href="/privacy" className="hover:text-black">Privacy</a>
-          <span className="mx-2">•</span>
-          <a href="/consent" className="hover:text-black">Consent</a>
+    <footer className="mt-16 border-t border-slate-200/60 bg-white/60">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-600 flex items-center justify-between">
+        <p>© {new Date().getFullYear()} Good2Go. All rights reserved.</p>
+        <div className="space-x-4">
+          <a className="hover:text-slate-900" href="/privacy">Privacy</a>
+          <a className="hover:text-slate-900" href="https://book.good2go-rth.com/book">Book</a>
         </div>
       </div>
     </footer>

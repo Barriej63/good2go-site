@@ -1,18 +1,23 @@
-import '../styles/globals.css';
+import type { Metadata } from 'next';
+import './globals.css';
+import { Inter } from 'next/font/google';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-export const metadata = {
-  title: 'Good2Go — Evidence‑Informed Concussion Monitoring',
-  description: 'Objective dual‑task gait assessment and decision support to guide safe return‑to‑activity.',
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'Good2Go — Objective Concussion Recovery Monitoring',
+  description:
+    'Evidence-based concussion recovery monitoring using dual-task gait analysis and personalized protocols.',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }){
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="antialiased text-zinc-900">
+      <body className={`${inter.className} bg-gradient-to-br from-slate-50 via-white to-blue-50/30 text-slate-900 antialiased selection:bg-blue-600/10 selection:text-blue-900`}>
         <Header />
-        <main className="mx-auto max-w-6xl px-4">{children}</main>
+        <main className="max-w-7xl mx-auto pt-28 px-4 sm:px-6 lg:px-8">{children}</main>
         <Footer />
       </body>
     </html>
