@@ -4,7 +4,7 @@ export default function Page(){
     ['Balance Score','Objective stability measure under dual‑task load.'],
     ['Gait Speed Score','Changes in speed and cadence captured precisely.'],
     ['Good2Go Score','Combined measure to simplify progress tracking.'],
-    ['Personalised thresholds','Sex‑aware, baseline‑aware target ranges.'],
+    ['Personalised thresholds','Gender‑aware, baseline‑aware target ranges.'],
     ['Progress dashboard','Visual trends and flags to support decisions.'],
     ['Research‑validated','Grounded in peer‑reviewed literature.'],
   ];
