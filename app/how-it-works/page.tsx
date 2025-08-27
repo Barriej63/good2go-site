@@ -1,16 +1,18 @@
+export const metadata = { title: 'How it Works — Good2Go' };
+
 export default function Page() {
   return (
-    <section className="py-12">
-      <h1 className="text-3xl font-semibold">How It Works</h1>
-      <div className="mt-4 text-lg text-zinc-700 max-w-prose">
-        <p className="prose-muted mt-2">1) Assess — run the dual‑task walking test.</p>
-        <p className="prose-muted mt-2">2) Capture — sensors record gait/balance metrics.</p>
-        <p className="prose-muted mt-2">3) Score — algorithm computes objective scores.</p>
-        <p className="prose-muted mt-2">4) Decide — combine trends with clinical judgment.</p>
-      </div>
-      <div className="page-actions">
-        <a href="https://book.good2go-rth.com/book" className="inline-flex items-center rounded-xl border border-g2g-primary bg-g2g-primary px-4 py-2 text-white text-sm shadow-soft hover:opacity-95">Book a Test</a>
-      </div>
-    </section>
+    <main style={{fontFamily:'system-ui, Arial, sans-serif'}}>
+      <section style={{maxWidth:960, margin:'32px auto', padding:'0 16px'}}>
+        <h1 style={{fontSize:28, fontWeight:700, marginBottom:12}}>How it Works</h1>
+        <ol style={{marginLeft:18, lineHeight:1.7}}>
+          <li><strong>Book online.</strong> Pick your region and time slot.</li>
+          <li><strong>Baseline (optional but recommended).</strong> Establish your personal normal.</li>
+          <li><strong>Post‑injury checks.</strong> 1‑minute dual‑task walk with turns; app measures gait metrics.</li>
+          <li><strong>Progress view.</strong> Dashboard trends show normalisation vs baseline or cohort ranges.</li>
+          <li><strong>Share with your clinician.</strong> Export or invite read‑only access when needed.</li>
+        </ol>
+      </section>
+    </main>
   );
 }

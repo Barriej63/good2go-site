@@ -1,14 +1,22 @@
+export const metadata = { title: 'About — Good2Go' };
+
 export default function Page() {
   return (
-    <section className="py-12">
-      <h1 className="text-3xl font-semibold">About Good2Go</h1>
-      <div className="mt-4 text-lg text-zinc-700 max-w-prose">
-        <p className="prose-muted mt-2">Our mission is safer, faster return‑to‑activity decisions through objective, evidence‑informed monitoring.</p>
-        <p className="prose-muted mt-2">We focus on dual‑task gait and clear scoring so clinicians can communicate risk and progress with confidence.</p>
-      </div>
-      <div className="page-actions">
-        <a href="https://book.good2go-rth.com/book" className="inline-flex items-center rounded-xl border border-g2g-primary bg-g2g-primary px-4 py-2 text-white text-sm shadow-soft hover:opacity-95">Book a Test</a>
-      </div>
-    </section>
+    <main style={{fontFamily:'system-ui, Arial, sans-serif'}}>
+      <section style={{maxWidth:960, margin:'32px auto', padding:'0 16px'}}>
+        <h1 style={{fontSize:28, fontWeight:700, marginBottom:12}}>About Good2Go</h1>
+        <p style={{marginBottom:12}}>
+          Good2Go is a concussion monitoring and return‑to‑healthy‑function service. We combine quick
+          baseline testing, smartphone‑based gait metrics, and simple progress dashboards so patients,
+          teams and clinics can track recovery with objective signals.
+        </p>
+        <ul style={{marginLeft:18, lineHeight:1.7}}>
+          <li><strong>Baseline & Follow‑up:</strong> Fast assessments that create a personalised reference.</li>
+          <li><strong>Gait Intelligence:</strong> Speed, cadence, double‑support %, and variability trends.</li>
+          <li><strong>Dual‑Task:</strong> Cognitive + walking testing to stress real‑world function.</li>
+          <li><strong>Booking & Payments:</strong> Online booking, email confirmations, easy re‑scheduling.</li>
+        </ul>
+      </section>
+    </main>
   );
 }

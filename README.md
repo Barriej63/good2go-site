@@ -1,27 +1,15 @@
-# Good2Go: react-chartjs-2 Patch
+# Good2Go Website Sections Patch
 
-This patch replaces the manual `<canvas>` chart with a `react-chartjs-2` component and ensures imports point to the **components** folder (not the staging folder).
+Adds the following pages to your Next.js App Router site:
+- `/about`
+- `/features` (replaces with structured cards)
+- `/how-it-works`
+- `/evidence`  (also available at `/scientific-foundation`)
 
-## What to do
+Also updates `components/Header.tsx` with navigation links to these pages.
 
-1. **Copy** `components/OutcomesChart.tsx` from this zip into your repo at:
-   `./components/OutcomesChart.tsx` (overwrite if asked).
+## Install
+1) Copy the `app/` and `components/` folders from this zip into your repo (merge/overwrite files).
+2) Commit to `main` and redeploy (uncheck "Use existing Build Cache").
 
-2. **Update imports** anywhere you use the chart to:
-   ```ts
-   import OutcomesChart from '@/components/OutcomesChart';
-   ```
-   or (without the alias) `../components/OutcomesChart` depending on your file location.
-
-3. **Delete the staging file** so it can’t be picked up by mistake:
-   `./good2go-deps-fix/OutcomesChart.tsx` (and any similar copies).
-
-4. Ensure your `/package.json` includes (you already added these, but double-check):
-   ```json
-   "react-chartjs-2": "^5.2.0",
-   "chart.js": "^4.4.4"
-   ```
-
-5. Commit to `main`, then in Vercel hit **Redeploy** and **uncheck** “Use existing Build Cache”.
-
-That’s it. The build should pass without TypeScript canvas typings.
+All files use inline styles to avoid any Tailwind setup issues.

@@ -1,24 +1,28 @@
+export const metadata = { title: 'Features — Good2Go' };
 
-export default function Page(){
-  const items = [
-    ['Balance Score','Objective stability measure under dual‑task load.'],
-    ['Gait Speed Score','Changes in speed and cadence captured precisely.'],
-    ['Good2Go Score','Combined measure to simplify progress tracking.'],
-    ['Personalised thresholds','Gender‑aware, baseline‑aware target ranges.'],
-    ['Progress dashboard','Visual trends and flags to support decisions.'],
-    ['Research‑validated','Grounded in peer‑reviewed literature.'],
-  ];
+const items: [string, string][] = [
+  ['Balance Score', 'Objective stability measure under dual‑task load.'],
+  ['Gait Speed Score', 'Changes in speed and cadence captured precisely.'],
+  ['Good2Go Score', 'Combined measure to simplify progress tracking.'],
+  ['Personalised Thresholds', 'Gender‑aware, baseline‑aware target ranges.'],
+  ['Progress Dashboard', 'Visual trends and flags to support decisions.'],
+  ['Research‑Validated', 'Grounded in peer‑reviewed literature.'],
+];
+
+export default function Page() {
   return (
-    <section className="py-12">
-      <h1 className="text-3xl font-semibold">Features</h1>
-      <div className="mt-6 grid gap-4 md:grid-cols-2">
-        {items.map(([t,d]) => (
-          <div key={t} className="rounded-2xl border border-zinc-200 p-5">
-            <div className="font-medium">{t}</div>
-            <div className="prose-muted text-sm mt-1">{d}</div>
-          </div>
-        ))}
-      </div>
-    </section>
+    <main style={{fontFamily:'system-ui, Arial, sans-serif'}}>
+      <section style={{maxWidth:960, margin:'32px auto', padding:'0 16px'}}>
+        <h1 style={{fontSize:28, fontWeight:700, marginBottom:12}}>Features</h1>
+        <div style={{display:'grid', gap:16, gridTemplateColumns:'repeat(auto-fit, minmax(260px, 1fr))'}}>
+          {items.map(([t, d]) => (
+            <div key={t} style={{border:'1px solid #e5e7eb', borderRadius:16, padding:16}}>
+              <div style={{fontWeight:600, marginBottom:6}}>{t}</div>
+              <div style={{color:'#6b7280', fontSize:14}}>{d}</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
