@@ -4,11 +4,11 @@ import OutcomesChart from '../components/OutcomesChart';
 
 export default function Page() {
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main style={{fontFamily:'system-ui, Arial, sans-serif'}}>
       <Header />
-      <section className="mx-auto max-w-6xl p-6">
-        <h1 className="text-2xl font-semibold mb-4">Good2Go Starter</h1>
-        <p className="mb-6">If you can see this page and the chart below, the build succeeded.</p>
+      <section style={{maxWidth:960, margin:'20px auto', padding:'0 16px'}}>
+        <h1 style={{fontSize:24, fontWeight:600, marginBottom:8}}>Good2Go Starter Build</h1>
+        <p style={{marginBottom:12}}>If you can see this page and the chart below, the build worked.</p>
         <OutcomesChart />
       </section>
     </main>
