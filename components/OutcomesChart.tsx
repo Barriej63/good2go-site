@@ -3,43 +3,13 @@ import React from 'react';
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 
-type Props = {
-  labels?: string[];
-  series?: number[];
-  title?: string;
-};
-
-export default function OutcomesChart({ labels, series, title = 'Outcomes' }: Props) {
-  const safeLabels = labels ?? ['Week 1','Week 2','Week 3','Week 4','Week 5'];
-  const safeSeries = series ?? [2, 4, 3, 6, 7];
-
+export default function OutcomesChart() {
   const data = {
-    labels: safeLabels,
+    labels: ['W1','W2','W3','W4','W5'],
     datasets: [
-      {
-        label: 'Score',
-        data: safeSeries,
-        tension: 0.3,
-        fill: false,
-      }
+      { label: 'Score', data: [2,3,4,3,5], tension: 0.3, fill: false }
     ]
   };
-
-  const options = {
-    responsive: true,
-    maintainAspectRatio: false,
-    plugins: {
-      legend: { display: true },
-      title: { display: !!title, text: title }
-    },
-    scales: {
-      y: { beginAtZero: true }
-    }
-  } as const;
-
-  return (
-    <div className="w-full h-64">
-      <Line data={data} options={options} />
-    </div>
-  );
+  const options = { responsive: true, maintainAspectRatio: false, scales: { y: { beginAtZero: true } } } as const;
+  return <div style={{height:260}}><Line data={data} options={options} /></div>;
 }

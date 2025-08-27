@@ -4,16 +4,16 @@ import { Menu } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="w-full border-b bg-white">
-      <div className="mx-auto max-w-6xl flex items-center justify-between px-4 py-3">
-        <Link href="/" className="font-semibold text-lg">Good2Go</Link>
-        <nav className="hidden md:flex gap-6">
-          <Link href="/pricing" className="text-sm hover:underline">Pricing</Link>
-          <Link href="/book" className="text-sm hover:underline">Book</Link>
-          <Link href="/contact" className="text-sm hover:underline">Contact</Link>
+    <header style={{borderBottom:'1px solid #eee', background:'#fff'}}>
+      <div style={{maxWidth:960, margin:'0 auto', padding:'12px 16px', display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+        <Link href="/" style={{fontWeight:600, fontSize:18}}>Good2Go</Link>
+        <nav style={{display:'flex', gap:12}}>
+          <Link href="/pricing">Pricing</Link>
+          <Link href="/book">Book</Link>
+          <Link href="/contact">Contact</Link>
         </nav>
-        <button aria-label="Open menu" className="md:hidden p-2 rounded hover:bg-gray-100">
-          <Menu size={20} />
+        <button aria-label="Open menu" style={{padding:8,borderRadius:8,border:'1px solid #eee', background:'#fafafa'}}>
+          <Menu size={18} />
         </button>
       </div>
     </header>
