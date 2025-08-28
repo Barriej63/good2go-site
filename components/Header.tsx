@@ -1,25 +1,53 @@
+"use client";
 
-'use client'
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+const nav = [
+  { href: "/crisis", label: "Crisis" },
+  { href: "/solution", label: "Our Solution" },
+  { href: "/evidence", label: "Scientific Foundation" },
+  { href: "/how-it-works", label: "How it Works" },
+  { href: "/pricing", label: "Pricing" },
+  { href: "https://book.good2go-rth.com", label: "Book", external: true },
+];
 
 export default function Header() {
+  const pathname = usePathname();
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/90 backdrop-blur">
-      <div className="container">
-        <div className="flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center gap-3">
-            <Image src="/High-Resolution-Color-Logo.svg" alt="Good2Go" width={164} height={44} priority />
-          </Link>
-          <nav className="hidden md:flex items-center gap-7 text-sm">
-            <Link href="/crisis" className="text-slate-600 hover:text-slate-900 transition-colors">Crisis</Link>
-            <Link href="/solution" className="text-slate-600 hover:text-slate-900 transition-colors">Our Solution</Link>
-            <Link href="/evidence" className="text-slate-600 hover:text-slate-900 transition-colors">Scientific Foundation</Link>
-            <Link href="/pricing" className="text-slate-600 hover:text-slate-900 transition-colors">Pricing</Link>
-            <a href="https://book.good2go-rth.com" className="font-medium text-blue-600 hover:text-blue-700">Book</a>
-          </nav>
-        </div>
+    <header className="border-b border-slate-200/60 bg-white/90 backdrop-blur">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <Link href="/" className="flex items-center gap-3">
+          <Image
+            src="/High-Resolution-Color-Logo.svg"
+            alt="Good2Go"
+            width={40}
+            height={40}
+            priority
+          />
+          <span className="text-lg font-semibold tracking-tight">Good2Go</span>
+        </Link>
+
+        <nav className="hidden md:flex items-center gap-7 text-sm">
+          {nav.map((item) => {
+            const active = !item.external && pathname === item.href;
+            const base = "transition-colors";
+            const classes = active
+              ? "text-slate-900 font-medium"
+              : "text-slate-600 hover:text-slate-900";
+            return item.external ? (
+              <a key={item.href} href={item.href} className={`${base} ${classes}`}>
+                {item.label}
+              </a>
+            ) : (
+              <Link key={item.href} href={item.href} className={`${base} ${classes}`}>
+                {item.label}
+              </Link>
+            );
+          })}
+        </nav>
       </div>
     </header>
-  )
+  );
 }
