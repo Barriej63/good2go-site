@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+  <rect width="1600" height="1000" fill="#f8fafc"/>
+  <rect x="80" y="80" width="1440" height="840" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-dasharray="8 8"/>
+  <text x="800" y="480" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="36" fill="#1f2937">RESEARCH IMAGE</text>
+  <text x="800" y="540" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="18" fill="#334155">Replace with /public/research.jpg later</text>
+</svg>
