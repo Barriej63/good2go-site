@@ -1,20 +1,23 @@
-Return Home Button (non-destructive)
+Non-destructive hero image restore (assets only)
 
-What this does
-- Adds a small client component that injects a “Return Home” button at the very bottom of the page,
-  but only on these routes: /crisis, /our-solution, /solution, /how-it-works, /evidence, /scientific-foundation.
-- No content is removed. No page files are edited.
+This ZIP only adds an image file. It does NOT change any of your text or pages.
+- Adds: /public/hero-default.jpg  (safe to keep or replace later)
 
-How it works
-- `components/RouteReturnHome.tsx` uses a React portal to append a simple container to the end of <body>,
-  so the button appears at the bottom after your content.
-- `components/Header.tsx` imports and renders RouteReturnHome; Header is already present on all pages,
-  so this keeps changes minimal and consistent.
+How to re-show the hero image (no text changes):
+1) Make sure your hero section in app/page.tsx has a right-side image block like this:
 
-Install (GitHub web editor friendly)
-1) Copy `components/RouteReturnHome.tsx` into your repo at `/components/`.
-2) Replace your existing `components/Header.tsx` with the one in this ZIP (it only adds the final line to render RouteReturnHome).
-3) Commit → redeploy on Vercel.
+   <div className="relative overflow-hidden rounded-2xl border border-slate-200">
+     <img
+       alt="Clinician reviewing dual-task gait assessment"
+       className="h-full w-full object-cover"
+       src="/hero-default.jpg"  // <-- uses the file in /public
+       loading="eager"
+     />
+     <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+   </div>
 
-Customize routes
-- If your routes differ (e.g., `/scientific-foundation` vs `/evidence`), update the `TARGET_ROUTES` Set in RouteReturnHome.tsx.
+2) Commit and redeploy. Your existing headings and text are untouched.
+
+Replacing later:
+- Drop your real image into /public as /hero.jpg (or any name you like).
+- Update the src in the block above to /hero.jpg and redeploy.
