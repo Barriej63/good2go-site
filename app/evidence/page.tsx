@@ -31,7 +31,7 @@ export default function EvidencePage() {
               <div className="text-sm font-medium">Key Research Findings</div>
               <ul className="mt-2 grid gap-3 text-sm text-slate-700">
                 <li>Enhanced Sensitivity: Dual-task conditions detect concussion-related deficits that persist longer than single-task assessments.</li>
-                <li>Gender-Based Differences: Study of 94 collegiate athletes established normal values and documented sex-based recovery differences.</li>
+                <li>Gender-Based Differences: Study of 94 collegiate athletes established normal values and documented gender-based recovery differences.</li>
                 <li>Clinical Validation: Multiple studies show dual-task gait analysis as a sensitive and specific marker of functional impairment.</li>
                 <li>Predictive Value: Dual-task gait costs are associated with subsequent sport-related injury risk.</li>
               </ul>
