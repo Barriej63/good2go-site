@@ -8,14 +8,39 @@ export default function Page() {
       {/* Keep existing Header usage */}
       <Header />
 
-      {/* HERO */}
-      <section className="mt-16 rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
-          Objective Concussion Recovery Monitoring
-        </h1>
-        <p className="mt-3 text-xl text-slate-800">Recover Smart. Return Strong.</p>
-        <p className="mt-2 text-slate-600">Welcome to Good2Go — your concussion recovery partner.</p>
-      </section>
+     {/* HERO */}
+<section className="relative isolate overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
+  <div className="grid gap-10 md:grid-cols-2 md:gap-8 md:p-4">
+    {/* Left side: Text */}
+    <div className="flex flex-col justify-center">
+      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
+        Objective Concussion Recovery Monitoring
+      </h1>
+      <p className="mt-3 text-xl text-slate-800">
+        Recover Smart. Return Strong.
+      </p>
+      <p className="mt-2 text-slate-600">
+        Welcome to Good2Go — your concussion recovery partner.
+      </p>
+    </div>
+
+    {/* Right side: Image */}
+    <div className="relative overflow-hidden rounded-2xl border border-slate-200">
+      <img
+        src="https://images.unsplash.com/photo-1516670428252-df97bba108d1?w=1200&q=80&auto=format&fit=crop"
+        alt="Clinician reviewing dual-task gait assessment"
+        className="h-full w-full object-cover"
+      />
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+      <div className="absolute bottom-4 left-4 right-4">
+        <div className="inline-flex items-center gap-2 rounded-xl bg-white/90 px-3 py-2 text-xs font-medium text-slate-700 ring-1 ring-inset ring-slate-200 backdrop-blur">
+          <i data-lucide="activity" className="h-4 w-4 text-blue-700"></i>
+          Dual-task gait · objective recovery metrics
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* CRISIS (restored) */}
       <section id="crisis" className="mt-16 lg:mt-24">
