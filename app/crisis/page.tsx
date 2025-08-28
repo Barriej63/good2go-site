@@ -1,13 +1,16 @@
-import Header from '@/components/Header';
+
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export default function CrisisPage() {
   return (
     <main>
       <Header />
-      <section className="p-12 max-w-3xl mx-auto">
-        <h1 className="text-3xl font-bold mb-4">The Global Concussion Crisis</h1>
-        <p className="text-gray-600">[Placeholder – more content will be added here later]</p>
+      <section className="section max-w-3xl">
+        <h1 className="h2">The Global Concussion Crisis</h1>
+        <p className="mt-4 prose-muted">Add detailed copy here to expand on the crisis narrative, underreporting, and the impact across sport, work and home.</p>
       </section>
+      <Footer />
     </main>
   )
 }
