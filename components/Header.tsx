@@ -8,22 +8,22 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
-            <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 text-white ring-1 ring-inset ring-white/20 shadow-sm">
+            <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-indigo-600 to-violet-600 text-white">
               <HeartPulse className="h-5 w-5" />
             </span>
             <span className="text-lg font-semibold tracking-tight">Good2Go</span>
           </Link>
           <nav className="hidden md:flex items-center gap-7 text-sm">
-            <Link href="/#about" className="text-slate-600 hover:text-slate-900 transition-colors">Crisis</Link>
-            <Link href="/#features" className="text-slate-600 hover:text-slate-900 transition-colors">Core Features</Link>
-            <Link href="/#how-it-works" className="text-slate-600 hover:text-slate-900 transition-colors">How it Works</Link>
-            <Link href="/#evidence" className="text-slate-600 hover:text-slate-900 transition-colors">Scientific Foundation</Link>
-            <Link href="/pricing" className="text-slate-600 hover:text-slate-900 transition-colors">Pricing</Link>
-            <a href="https://book.good2go-rth.com" className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white ring-1 ring-inset ring-blue-600/10 hover:bg-blue-700">
+            <Link href="/#about">Crisis</Link>
+            <Link href="/#features">Core Features</Link>
+            <Link href="/#how-it-works">How it Works</Link>
+            <Link href="/#evidence">Scientific Foundation</Link>
+            <Link href="/pricing">Pricing</Link>
+            <a href="https://book.good2go-rth.com" className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white">
               Book a Test <CalendarCheck className="h-4 w-4" />
             </a>
           </nav>
-          <a href="https://book.good2go-rth.com" className="md:hidden inline-flex items-center gap-2 rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium text-white ring-1 ring-inset ring-blue-600/10">
+          <a href="https://book.good2go-rth.com" className="md:hidden inline-flex items-center gap-2 rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium text-white">
             <Sparkles className="h-4 w-4" /> Book
           </a>
         </div>
