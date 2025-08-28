@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <rect x="60" y="60" width="1480" height="780" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="2"/>
+  <!-- Fake chart lines -->
+  <polyline points="120,720 280,640 440,600 600,520 760,480 920,420 1080,380 1240,340 1400,320" fill="none" stroke="#2563eb" stroke-width="4"/>
+  <polyline points="120,660 280,660 440,640 600,600 760,560 920,560 1080,520 1240,500 1400,480" fill="none" stroke="#10b981" stroke-width="4"/>
+  <text x="800" y="160" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="28" fill="#0f172a">CHART IMAGE</text>
+  <text x="800" y="200" text-anchor="middle" font-family="Inter, Arial, sans-serif" font-size="16" fill="#334155">Replace with /public/chart.jpg later</text>
+</svg>
