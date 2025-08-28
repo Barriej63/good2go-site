@@ -11,5 +11,5 @@ export default function OutcomesChart() {
       { label: 'Double-Support (%)', data:[34,31,28,26,24,23], tension:0.35, pointRadius:2.5 },
     ],
   };
-  return <Line data={data} options={{responsive:true,maintainAspectRatio:false}} />;
+  return <div className="h-56"><Line data={data} options={{responsive:true,maintainAspectRatio:false}} /></div>;
 }

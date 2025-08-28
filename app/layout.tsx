@@ -1,9 +1,15 @@
-export const metadata = { title: 'Good2Go', description: 'Good2Go site test build' };
+import './globals.css'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Good2Go — Objective Concussion Recovery Monitoring',
+  description: 'Evidence-based concussion recovery monitoring using dual-task gait analysis.',
+}
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="min-h-screen">{children}</body>
+      <body>{children}</body>
     </html>
-  );
+  )
 }
