@@ -1,25 +1,23 @@
-export const metadata = { title: 'Supporting Evidence — Good2Go' };
+import Header from '@/components/Header';
 
-export default function Page() {
+export default function EvidencePage() {
   return (
-    <main style={{fontFamily:'system-ui, Arial, sans-serif'}}>
-      <section style={{maxWidth:960, margin:'32px auto', padding:'0 16px'}}>
-        <h1 style={{fontSize:28, fontWeight:700, marginBottom:12}}>Supporting Evidence</h1>
-        <p style={{marginBottom:12}}>
-          Good2Go focuses on gait‑based recovery markers that are well‑described in the literature.
-          In concussion recovery, <em>gait speed</em> and <em>cadence</em> tend to improve over time,
-          while <em>double‑support %</em> and certain variability measures tend to reduce toward normal ranges.
-        </p>
-        <ul style={{marginLeft:18, lineHeight:1.7}}>
-          <li>Dual‑task walking can reveal subtle deficits not seen in single‑task walking.</li>
-          <li>Trends, not single values, are typically the best signals of normalisation.</li>
-          <li>Baseline testing increases confidence in individual decision‑making.</li>
-        </ul>
-        <p style={{marginTop:12, color:'#6b7280', fontSize:14}}>
-          Note: This page summarises themes from peer‑reviewed research for patient‑friendly reading.
-          Your clinician should interpret results alongside clinical context.
-        </p>
+    <main>
+      <Header />
+      <section className="p-12 max-w-3xl mx-auto">
+        <h1 className="text-3xl font-bold mb-4">Scientific Foundation</h1>
+        <iframe src="https://good-2-go-concussion-tracker-movementmender.replit.app/?auth=NCKV7LG2"
+                className="w-full h-96 border rounded" />
+        <div className="mt-6">
+          <h2 className="text-xl font-semibold mb-2">Key Research Findings</h2>
+          <ul className="list-disc ml-6 text-gray-700">
+            <li>Enhanced Sensitivity: Dual-task conditions detect concussion-related deficits that persist longer than single-task assessments.</li>
+            <li>Gender-Based Differences: Study of 94 collegiate athletes established normal values and documented sex-based recovery differences.</li>
+            <li>Clinical Validation: Multiple studies show dual-task gait analysis as a sensitive and specific marker of functional impairment.</li>
+            <li>Predictive Value: Dual-task gait costs are associated with subsequent sport-related injury risk.</li>
+          </ul>
+        </div>
       </section>
     </main>
-  );
+  )
 }
