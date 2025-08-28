@@ -1,20 +1,25 @@
-'use client';
-import Image from 'next/image';
-import Link from 'next/link';
+
+'use client'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="flex items-center justify-between p-4 border-b border-gray-200 bg-white">
-      <Link href="/">
-        <Image src="/logo-color.svg" alt="Good2Go Logo" width={160} height={40} />
-      </Link>
-      <nav className="flex gap-6 text-sm">
-        <Link href="/crisis">Crisis</Link>
-        <Link href="/solution">Our Solution</Link>
-        <Link href="/evidence">Scientific Foundation</Link>
-        <Link href="/pricing">Pricing</Link>
-        <a href="https://book.good2go-rth.com" className="font-semibold text-blue-600">Book</a>
-      </nav>
+    <header className="sticky top-0 z-50 border-b border-slate-200/60 bg-white/90 backdrop-blur">
+      <div className="container">
+        <div className="flex h-16 items-center justify-between">
+          <Link href="/" className="flex items-center gap-3">
+            <Image src="/High-Resolution-Color-Logo.svg" alt="Good2Go" width={164} height={44} priority />
+          </Link>
+          <nav className="hidden md:flex items-center gap-7 text-sm">
+            <Link href="/crisis" className="text-slate-600 hover:text-slate-900 transition-colors">Crisis</Link>
+            <Link href="/solution" className="text-slate-600 hover:text-slate-900 transition-colors">Our Solution</Link>
+            <Link href="/evidence" className="text-slate-600 hover:text-slate-900 transition-colors">Scientific Foundation</Link>
+            <Link href="/pricing" className="text-slate-600 hover:text-slate-900 transition-colors">Pricing</Link>
+            <a href="https://book.good2go-rth.com" className="font-medium text-blue-600 hover:text-blue-700">Book</a>
+          </nav>
+        </div>
+      </div>
     </header>
-  );
+  )
 }
