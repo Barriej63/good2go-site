@@ -3,12 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import RouteReturnHome from "./RouteReturnHome";
 
 const nav = [
   { href: "/crisis", label: "Crisis" },
-  { href: "/solution", label: "Our Solution" },
-  { href: "/evidence", label: "Scientific Foundation" },
+  { href: "/our-solution", label: "Our Solution" },
   { href: "/how-it-works", label: "How it Works" },
+  { href: "/evidence", label: "Scientific Foundation" },
   { href: "/pricing", label: "Pricing" },
   { href: "https://book.good2go-rth.com", label: "Book", external: true },
 ];
@@ -48,6 +49,9 @@ export default function Header() {
           })}
         </nav>
       </div>
+
+      {/* Injects a bottom-of-page Return Home button on certain routes, without touching page files */}
+      <RouteReturnHome />
     </header>
   );
 }
