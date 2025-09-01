@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import RouteReturnHome from "./RouteReturnHome";
 
 const nav = [
-  { href: "/crisis", label: "Crisis" },
+  { href: "/delimma", label: "Delimma" },
   { href: "/our-solution", label: "Our Solution" },
   { href: "/how-it-works", label: "How it Works" },
   { href: "/evidence", label: "Scientific Foundation" },
