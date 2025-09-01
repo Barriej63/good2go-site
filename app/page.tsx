@@ -1,6 +1,10 @@
 'use client';
 
-import Header from '../components/Header';
+import Image from 'next/image';
+import Link from 'next/link';
+
+// If Header exists at /components/Header.tsx
+import Header from '@/components/Header';
 
 export default function Page() {
   return (
@@ -43,69 +47,66 @@ export default function Page() {
 </section>
 
       {/* CRISIS (restored) */}
-      <section id="crisis" className="mt-16 lg:mt-24">
-        <div className="grid items-start gap-8 md:grid-cols-2">
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">The Global Concussion Dilemma</h2>
-            <p className="mt-4 text-slate-600 leading-relaxed">
-              For those unfortunate to have suffered a concussion, the difficulty is knowing when it's safe to return to activities, 
-              and uncertaintity around their recovery progress.  For health practitioners, there is a lack of solid diagnostic criteria 
-              and a reliance on subjective symptom reporting rather than objective measures. 
-            </p>
-            <ul className="mt-6 grid gap-3 text-sm text-slate-700">
-              <li className="flex items-center gap-2">🌐 <span>70 Million — Annual concussions worldwide across sports, workplace, and home environments</span></li>
-              <li className="flex items-center gap-2">🏆 <span>3.8 Million — Concussions occur annually in the United States from sports and recreation</span></li>
-              <li className="flex items-center gap-2">💵 <span>$57 Billion — Estimated economic burden created by concussions in the United States</span></li>
-              <li className="flex items-center gap-2">🙈 <span>50% — Estimated underreporting rate of concussions</span></li>
-            </ul>
-          </div>
-          <div className="grid gap-4 sm:grid-cols-2">
-            <div className="rounded-2xl border border-slate-200 bg-blue-50/60 p-5">
-              <div className="text-sm font-medium">Annual Concussions</div>
-              <div className="text-xs text-slate-500">Worldwide</div>
-              <div className="mt-3 text-2xl font-semibold tracking-tight text-blue-700">70M</div>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-emerald-50/60 p-5">
-              <div className="text-sm font-medium">US Sports/Rec</div>
-              <div className="text-xs text-slate-500">Annual concussions</div>
-              <div className="mt-3 text-2xl font-semibold tracking-tight text-emerald-700">3.8M</div>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-amber-50/60 p-5">
-              <div className="text-sm font-medium">Economic Burden</div>
-              <div className="text-xs text-slate-500">United States</div>
-              <div className="mt-3 text-2xl font-semibold tracking-tight text-amber-700">$57B</div>
-            </div>
-            <div className="rounded-2xl border border-slate-200 bg-rose-50/60 p-5">
-              <div className="text-sm font-medium">Underreporting</div>
-              <div className="text-xs text-slate-500">Estimated rate</div>
-              <div className="mt-3 text-2xl font-semibold tracking-tight text-rose-700">50%</div>
-            </div>
-          </div>
-        </div>
-      </section>
+<section id="crisis" className="mt-16 lg:mt-24">
+  <div className="grid items-start gap-8 md:grid-cols-2">
+    <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+      <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+        The Global Concussion Dilemma
+      </h2>
+      <p className="mt-4 text-slate-600 leading-relaxed">
+        For those unfortunate to have suffered a concussion, the difficulty is
+        knowing when it&apos;s safe to return to activities, and uncertainty around
+        their recovery progress. For health practitioners, there is a lack of
+        solid diagnostic criteria and a reliance on subjective symptom reporting
+        rather than objective measures.
+      </p>
+      <ul className="mt-6 grid gap-3 text-sm text-slate-700">
+        <li className="flex items-center gap-2">🌍
+          <span>70 Million — Annual concussions worldwide across sports,
+          workplace, and home environments</span>
+        </li>
+        <li className="flex items-center gap-2">⏳
+          <span>3.8 Million — Concussions occur annually in the United States
+          from sports and recreation</span>
+        </li>
+        <li className="flex items-center gap-2">💵
+          <span>$57 Billion — Estimated economic burden created by concussions
+          in the United States</span>
+        </li>
+        <li className="flex items-center gap-2">🙈
+          <span>50% — Estimated underreporting rate of concussions</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
 
       {/* OUR SOLUTION */}
-      <section id="our-solution" className="mt-16 lg:mt-24">
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Our Solution</h2>
-          <p className="mt-3 text-slate-600 leading-relaxed">
-            Monitor patients with Good2Go&apos;s Dual‑task Gait assessment.
-          </p>
-          <p className="mt-3 text-slate-600 leading-relaxed">
-          Good2Go is an evidence-based concussion monitoring platform that empowers healthcare practitioners 
-          with objective assessment tools to guide safe return-to-activity decisions. Built on peer‑reviewed 
-          research and dual‑task gait analysis, Good2Go addresses the critical gap in concussion management 
-          through personalized, scientific protocols.
-          <ul className="mt-3 grid gap-2 text-sm text-slate-700">
-            <li>• Provides healthcare practitioners with objective, defensible data for safe return‑to‑activity decisions.</li>
-            <li>• Gives patients clear, understandable information showing where they are on their return‑to‑health journey.</li>
-            <li>• Improves patient confidence in their care team and path to recovery.</li>
-          </ul>
-          <div className="mt-5">
-            <a
-              href="https://book.good2go-rth.com"
-              className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white ring-1 ring-inset ring-blue-600/10 hover:bg-blue-700"
-            >
+<section id="our-solution" className="mt-16 lg:mt-24">
+  <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+    <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Our Solution</h2>
+    <p className="mt-3 text-slate-600 leading-relaxed">
+      Monitor patients with Good2Go&apos;s Dual-task Gait assessment.
+    </p>
+    <p className="mt-3 text-slate-600 leading-relaxed">
+      Good2Go is an evidence-based concussion monitoring platform that empowers
+      healthcare practitioners with objective assessment tools to guide safe
+      return-to-activity decisions. Built on peer-reviewed research and
+      dual-task gait analysis, Good2Go addresses the critical gap in concussion
+      management through personalized, scientific protocols.
+    </p>
+    <ul className="mt-3 grid gap-2 text-sm text-slate-700">
+      <li>Provides healthcare practitioners with objective, defensible data for
+        safe return-to-activity decisions.</li>
+      <li>Gives patients clear, understandable information showing where they are
+        on their return-to-health journey.</li>
+      <li>Improves patient confidence in their care team and path to recovery.</li>
+    </ul>
+    <div className="mt-5">
+      <a
+        href="https://book.good2go-rth.com"
+        className="inline-flex items-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700"
+      >
               Book an Assessment
             </a>
           </div>
