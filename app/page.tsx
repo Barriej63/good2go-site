@@ -46,38 +46,46 @@ export default function Page() {
   </div>
 </section>
 
-      {/* CRISIS (restored) */}
+     {/* CRISIS (restored) */}
 <section id="crisis" className="mt-16 lg:mt-24">
+  {/* Turn into a two-column grid on md+ */}
   <div className="grid items-start gap-8 md:grid-cols-2">
+    
+    {/* LEFT: your existing card & text (unchanged) */}
     <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
       <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
         The Global Concussion Dilemma
       </h2>
       <p className="mt-4 text-slate-600 leading-relaxed">
         For those unfortunate to have suffered a concussion, the difficulty is
-        knowing when it&apos;s safe to return to activities, and uncertainty around
+        knowing when it's safe to return to activities, and uncertainty around
         their recovery progress. For health practitioners, there is a lack of
         solid diagnostic criteria and a reliance on subjective symptom reporting
         rather than objective measures.
       </p>
+
       <ul className="mt-6 grid gap-3 text-sm text-slate-700">
-        <li className="flex items-center gap-2">🌍
-          <span>70 Million — Annual concussions worldwide across sports,
-          workplace, and home environments</span>
-        </li>
-        <li className="flex items-center gap-2">⏳
-          <span>3.8 Million — Concussions occur annually in the United States
-          from sports and recreation</span>
-        </li>
-        <li className="flex items-center gap-2">💵
-          <span>$57 Billion — Estimated economic burden created by concussions
-          in the United States</span>
-        </li>
-        <li className="flex items-center gap-2">🙈
-          <span>50% — Estimated underreporting rate of concussions</span>
-        </li>
+        <li className="flex items-center gap-2">🌍 <span>70 Million — Annual concussions worldwide across sports, workplace, and home environments</span></li>
+        <li className="flex items-center gap-2">🏅 <span>3.8 Million — Concussions occur annually in the United States from sports and recreation</span></li>
+        <li className="flex items-center gap-2">💵 <span>$57 Billion — Estimated economic burden created by concussions in the United States</span></li>
+        <li className="flex items-center gap-2">🙈 <span>50% — Estimated underreporting rate of concussions</span></li>
       </ul>
+
+      {/* Keep any buttons you already added here */}
     </div>
+
+    {/* RIGHT: resurrected graphic block */}
+    <aside className="rounded-3xl border border-slate-200 overflow-hidden bg-gradient-to-br from-blue-50 to-violet-50">
+      {/* Option A: use an image from /public */}
+      <img
+        src="/crisis-graphic.jpg"          // <-- put your file in /public and change this filename
+        alt="Concussion crisis illustration"
+        className="w-full h-full object-cover"
+      />
+
+      {/* Option B (fallback): show your hero illustration if you don’t have a photo yet */}
+      {/* <img src="/hero-illustration.svg" alt="Illustration" className="w-full h-full object-cover" /> */}
+    </aside>
   </div>
 </section>
 
