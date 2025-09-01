@@ -73,10 +73,10 @@ export default function Page() {
       </p>
 
       <ul className="mt-6 grid gap-3 text-sm text-slate-700">
-        <li className="flex items-center gap-2">🌍 <span>70 Million — Annual concussions worldwide across sports, workplace, and home environments</span></li>
-        <li className="flex items-center gap-2">🏅 <span>3.8 Million — Concussions occur annually in the United States from sports and recreation</span></li>
-        <li className="flex items-center gap-2">💵 <span>$57 Billion — Estimated economic burden created by concussions in the United States</span></li>
-        <li className="flex items-center gap-2">🙈 <span>50% — Estimated underreporting rate of concussions</span></li>
+        <li className="flex items-center gap-2">🌍 Concussion symptoms that affect your judgment and motor skills can increase your risk of another concussion, or lower limb injury</span></li>
+        <li className="flex items-center gap-2">🌍 <span>Loss of Consciousness is Uncommon: Over 90% do not involve a loss of consciousness</span></li>
+        <li className="flex items-center gap-2">🌍 <span>Concussions commonly affect your emotions and judgment. As a result, many people experience inappropriate and unexplained surges in emotions</span></li>
+        <li className="flex items-center gap-2">🌍 <span>Most patients recover within 2-4 weeks, but 15-30% experience persistent symptoms</span></li>
       </ul>
     </div>
   </div>
