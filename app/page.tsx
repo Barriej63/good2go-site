@@ -46,7 +46,7 @@ export default function Page() {
       <section id="crisis" className="mt-16 lg:mt-24">
         <div className="grid items-start gap-8 md:grid-cols-2">
           <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">The Global Concussion Delimma</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">The Global Concussion Dilemma</h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
               For those unfortunate to have suffered a concussion, the difficulty is knowing when it's safe to return to activities, 
               and uncertaintity around their recovery progress.  For health practitioners, there is a lack of solid diagnostic criteria 
