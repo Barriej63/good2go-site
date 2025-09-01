@@ -46,12 +46,11 @@ export default function Page() {
       <section id="crisis" className="mt-16 lg:mt-24">
         <div className="grid items-start gap-8 md:grid-cols-2">
           <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">The Global Concussion Crisis</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">The Global Concussion Delimma</h2>
             <p className="mt-4 text-slate-600 leading-relaxed">
-              Good2Go is an evidence-based concussion monitoring platform that empowers healthcare practitioners
-              with objective assessment tools to guide safe return-to-activity decisions. Built on peer‑reviewed
-              research and dual‑task gait analysis, Good2Go addresses the critical gap in concussion management
-              through personalized, scientific protocols.
+              For those unfortunate to have suffered a concussion, the difficulty is knowing when it's safe to return to activities, 
+              and uncertaintity around their recovery progress.  For health practitioners, there is a lack of solid diagnostic criteria 
+              and a reliance on subjective symptom reporting rather than objective measures. 
             </p>
             <ul className="mt-6 grid gap-3 text-sm text-slate-700">
               <li className="flex items-center gap-2">🌐 <span>70 Million — Annual concussions worldwide across sports, workplace, and home environments</span></li>
@@ -92,6 +91,11 @@ export default function Page() {
           <p className="mt-3 text-slate-600 leading-relaxed">
             Monitor patients with Good2Go&apos;s Dual‑task Gait assessment.
           </p>
+          <p className="mt-3 text-slate-600 leading-relaxed">
+          Good2Go is an evidence-based concussion monitoring platform that empowers healthcare practitioners 
+          with objective assessment tools to guide safe return-to-activity decisions. Built on peer‑reviewed 
+          research and dual‑task gait analysis, Good2Go addresses the critical gap in concussion management 
+          through personalized, scientific protocols.
           <ul className="mt-3 grid gap-2 text-sm text-slate-700">
             <li>• Provides healthcare practitioners with objective, defensible data for safe return‑to‑activity decisions.</li>
             <li>• Gives patients clear, understandable information showing where they are on their return‑to‑health journey.</li>
