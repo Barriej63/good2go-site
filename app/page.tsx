@@ -220,7 +220,7 @@ export default function Page() {
     <div className="space-y-4">
       <div className="rounded-2xl border border-slate-200 bg-white p-3 sm:p-4">
         <img
-          src="/evidence-chart-demo.png"            // <-- your chart image in /public
+          src="/science-chart-demo.png"            // <-- your chart image in /public
           alt="Good2Go Score Progress"
           className="w-full rounded-lg"
         />
