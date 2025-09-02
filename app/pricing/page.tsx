@@ -38,7 +38,7 @@ export default function PricingPage() {
                 <span className="badge">Contact us</span>
               </div>
               <p className="mt-2 small">Team/clinic bulk baselines with centralized monitoring and support.</p>
-              <a href="https://book.good2go-rth.com" className="btn btn-primary mt-5 w-full">Contact Sales</a>
+              <a href="https://good2go-rth.com/pricing" className="btn btn-primary mt-5 w-full">Contact Sales</a>
             </div>
           </div>
         </div>
