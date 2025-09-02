@@ -53,7 +53,7 @@ export default function Page() {
     {/* LEFT: image block */}
     <aside className="rounded-3xl border border-slate-200 overflow-hidden bg-gradient-to-br from-blue-50 to-violet-50">
       <img
-        src="/crisis-graphic.jpeg"   // drop file in /public, e.g. /public/crisis-graphic.jpeg
+        src="/crisis-graphic.png"   // drop file in /public, e.g. /public/crisis-graphic.png
         alt="Concussion crisis illustration"
         className="w-full h-full object-cover"
       />
