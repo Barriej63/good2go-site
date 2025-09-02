@@ -352,7 +352,7 @@ export default function Page() {
         </li>
       </ul>
       <a
-        href="https://book.good2go-rth.com"
+        href="https://good2go-rth.com/pricing"
         className="inline-flex w-full items-center justify-center gap-2 hover:bg-slate-800 text-sm font-medium text-white bg-slate-900 rounded-lg mt-5 py-2.5"
       >
         Talk to Us
