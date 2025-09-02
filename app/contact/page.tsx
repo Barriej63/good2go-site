@@ -1,6 +1,40 @@
 'use client';
 
+import { useState } from "react";
+
 export default function ContactPage() {
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [message, setMessage] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+    setMessage("");
+
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (res.ok) {
+        setStatus("success");
+        setMessage("✅ Thanks, your message has been sent. We’ll be in touch soon.");
+        form.reset();
+      } else {
+        const data = await res.json();
+        throw new Error(data.error || "Failed to send message");
+      }
+    } catch (err: any) {
+      console.error("Contact form error:", err);
+      setStatus("error");
+      setMessage("❌ Sorry, something went wrong. Please try again later.");
+    }
+  }
+
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-slate-900">
       <h1 className="text-3xl font-semibold tracking-tight mb-6">Contact Us</h1>
@@ -10,8 +44,7 @@ export default function ContactPage() {
       </p>
 
       <form
-        action="/api/contact"
-        method="POST"
+        onSubmit={handleSubmit}
         className="grid gap-6 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
       >
         <div>
@@ -63,12 +96,24 @@ export default function ContactPage() {
           </p>
           <button
             type="submit"
-            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700"
+            disabled={status === "loading"}
+            className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
           >
-            Send
+            {status === "loading" ? "Sending…" : "Send"}
           </button>
         </div>
       </form>
+
+      {/* Confirmation/Error message */}
+      {message && (
+        <p
+          className={`mt-4 text-sm ${
+            status === "success" ? "text-emerald-700" : "text-rose-600"
+          }`}
+        >
+          {message}
+        </p>
+      )}
     </main>
   );
 }
