@@ -6,11 +6,13 @@ import { usePathname } from "next/navigation";
 import RouteReturnHome from "./RouteReturnHome";
 
 const nav = [
-  { href: "/crisis", label: "Dilemma" },
+  { href: "/dilemma", label: "Dilemma" },
+  // Folder is "solution", so link there (not /our-solution)
   { href: "/our-solution", label: "Our Solution" },
   { href: "/how-it-works", label: "How it Works" },
-  { href: "/evidence", label: "Scientific Foundation" },
+  { href: "/scientific-foundation", label: "Scientific Foundation" },
   { href: "/pricing", label: "Pricing" },
+  { href: "/contact", label: "Contact" }, // <-- add this
   { href: "https://book.good2go-rth.com", label: "Book", external: true },
 ];
 
