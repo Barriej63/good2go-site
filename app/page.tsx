@@ -67,7 +67,20 @@ export default function Page() {
         <li className="flex items-center gap-2">💵 $57 Billion — Estimated economic burden created by concussions in the United States</li>
         <li className="flex items-center gap-2">🙈 50% — Estimated underreporting rate of concussions</li>
       </ul>
-    </div>
+    <div className="mt-6 flex gap-4">
+  <a
+    href="/scientific-foundation"
+    className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200"
+  >
+    Learn More
+  </a>
+  <a
+    href="https://book.good2go-rth.com"
+    className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+  >
+    Book a Test
+  </a>
+</div>
 
     {/* RIGHT: Image */}
     <div className="rounded-3xl border border-slate-200 overflow-hidden">
