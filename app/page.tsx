@@ -9,7 +9,7 @@ import Header from '@/components/Header';
 export default function Page() {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-slate-900">
-      {/* Keep existing Header usage */}
+    {/* Keep existing Header usage */}
       <Header />
 
      {/* HERO */}
