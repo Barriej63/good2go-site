@@ -73,12 +73,13 @@ export default function Page() {
       </p>
 
       <ul className="mt-6 grid gap-3 text-sm text-slate-700">
-        <li className="flex items-center gap-2">🌍 Concussion symptoms that affect your judgment and motor skills can increase your risk of another concussion, or lower limb injury</span></li>
-        <li className="flex items-center gap-2">🌍 <span>Loss of Consciousness is Uncommon: Over 90% do not involve a loss of consciousness</span></li>
-        <li className="flex items-center gap-2">🌍 <span>Concussions commonly affect your emotions and judgment. As a result, many people experience inappropriate and unexplained surges in emotions</span></li>
-        <li className="flex items-center gap-2">🌍 <span>Most patients recover within 2-4 weeks, but 15-30% experience persistent symptoms</span></li>
+        <li className="flex items-center gap-2">🌍 Concussion symptoms that affect your judgment and motor skills can increase your risk of another concussion, or lower limb injury</li>
+        <li className="flex items-center gap-2">🌍 Loss of Consciousness is Uncommon: Over 90% do not involve a loss of consciousness</li>
+        <li className="flex items-center gap-2">🌍 Concussions commonly affect your emotions and judgment. As a result, many people experience inappropriate and unexplained surges in emotions</li>
+        <li className="flex items-center gap-2">🌍 Most patients recover within 2–4 weeks, but 15–30% experience persistent symptoms</li>
       </ul>
     </div>
+    
   </div>
 </section>
 
