@@ -95,7 +95,7 @@ export default function Page() {
       management through personalised, scientific protocols.
     </p>
     <p className="mt-3 text-slate-600 leading-relaxed">
-      It’s important to get the proffessional help you need to heal after a concussion.  Good2Go&apos;s 
+      It’s important to get the professional help you need to heal after a concussion.  Good2Go&apos;s 
       Dual-task Gait assessment aids the healthcare practitioner to apply multidisciplinary 
       interventions to help you recover sooner.
     </p>  
@@ -136,7 +136,7 @@ export default function Page() {
           <div className="rounded-2xl border border-slate-200 bg-indigo-50/60 p-6">
             <div className="text-base font-semibold">Gait Speed Score</div>
             <p className="mt-3 text-sm leading-relaxed text-slate-600">
-              Evaluates walking speed under dual‑task conditions with height‑adjusted normalization to capture
+              Evaluates walking speed under dual‑task conditions with height‑adjusted normalisation to capture
               functional impairment.
             </p>
           </div>
