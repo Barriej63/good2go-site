@@ -46,20 +46,10 @@ export default function Page() {
   </div>
 </section>
 
-     {/* CRISIS (restored) */}
+    {/* CRISIS (image on the right, text left) */}
 <section id="crisis" className="mt-16 lg:mt-24">
-  <div className="grid items-start gap-8 md:grid-cols-2">
-    
-    {/* LEFT: image block */}
-    <aside className="rounded-3xl border border-slate-200 overflow-hidden bg-gradient-to-br from-blue-50 to-violet-50">
-      <img
-        src="/crisis-graphic.png"   // drop file in /public, e.g. /public/crisis-graphic.png
-        alt="Concussion crisis illustration"
-        className="w-full h-full object-cover"
-      />
-    </aside>
-
-    {/* RIGHT: text content */}
+  <div className="grid md:grid-cols-2 gap-8 items-start">
+    {/* LEFT: Text content */}
     <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
       <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
         The Global Concussion Dilemma
@@ -71,15 +61,22 @@ export default function Page() {
         solid diagnostic criteria and a reliance on subjective symptom reporting
         rather than objective measures.
       </p>
-
       <ul className="mt-6 grid gap-3 text-sm text-slate-700">
-        <li className="flex items-center gap-2">🌍 Concussion symptoms that affect your judgment and motor skills can increase your risk of another concussion, or lower limb injury</li>
-        <li className="flex items-center gap-2">🌍 Loss of Consciousness is Uncommon: Over 90% do not involve a loss of consciousness</li>
-        <li className="flex items-center gap-2">🌍 Concussions commonly affect your emotions and judgment. As a result, many people experience inappropriate and unexplained surges in emotions</li>
-        <li className="flex items-center gap-2">🌍 Most patients recover within 2–4 weeks, but 15–30% experience persistent symptoms</li>
+        <li className="flex items-center gap-2">🌍 70 Million — Annual concussions worldwide across sports, workplace, and home environments</li>
+        <li className="flex items-center gap-2">🏅 3.8 Million — Concussions occur annually in the United States from sports and recreation</li>
+        <li className="flex items-center gap-2">💵 $57 Billion — Estimated economic burden created by concussions in the United States</li>
+        <li className="flex items-center gap-2">🙈 50% — Estimated underreporting rate of concussions</li>
       </ul>
     </div>
-    
+
+    {/* RIGHT: Image */}
+    <div className="rounded-3xl border border-slate-200 overflow-hidden">
+      <img
+        src="/crisis-graphic.png"   // make sure this file is in /public
+        alt="Concussions by the Numbers"
+        className="w-full h-full object-cover"
+      />
+    </div>
   </div>
 </section>
 
@@ -150,7 +147,7 @@ export default function Page() {
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-6">
-            <div className="text-base font-semibold">Personalized Protocols</div>
+            <div className="text-base font-semibold">Personalised Protocols</div>
             <p className="mt-3 text-sm leading-relaxed text-slate-600">
               Accounts for gender‑based differences and individual baselines to improve clinical accuracy.
             </p>
@@ -158,7 +155,7 @@ export default function Page() {
           <div className="rounded-2xl border border-slate-200 bg-purple-50/60 p-6">
             <div className="text-base font-semibold">Progress Tracking</div>
             <p className="mt-3 text-sm leading-relaxed text-slate-600">
-              Longitudinal dashboards visualize recovery trends and milestone achievements over time.
+              Longitudinal dashboards visualise recovery trends and milestone achievements over time.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-rose-50/60 p-6">
@@ -266,7 +263,7 @@ export default function Page() {
           </li>
           <li>
             Statistical significance requirements maintained; individual assessments
-            prioritized over population norms.
+            prioritised over population norms.
           </li>
         </ul>
       </div>
