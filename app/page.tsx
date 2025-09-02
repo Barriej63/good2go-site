@@ -274,6 +274,96 @@ export default function Page() {
   </div>
 </section>
 
+      {/* WHY CHOOSE US */}
+<section id="why-choose-us" className="mt-16 lg:mt-24">
+  <div className="flex items-end justify-between gap-6">
+    <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+      Why Healthcare Providers Choose Good2Go
+    </h2>
+    <span className="hidden sm:inline-flex items-center gap-2 rounded-full border border-slate-200 px-3 py-1.5 text-xs text-slate-600">
+      Objective, evidence-based decision support
+    </span>
+  </div>
+
+  {/* 3-card grid */}
+  <div className="mt-6 grid gap-4 lg:grid-cols-3">
+    {/* Objective Decision Support */}
+    <div className="rounded-2xl border border-slate-200 bg-white p-6">
+      <div className="flex items-center justify-between">
+        <div className="text-base font-semibold">Objective Decision Support</div>
+        <span className="rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-700">Defensible data</span>
+      </div>
+      <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+        <li className="flex items-center gap-2">
+          <span className="text-emerald-600">✔</span> Move beyond subjective symptom reporting
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="text-emerald-600">✔</span> Clear support for return-to-activity decisions
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="text-emerald-600">✔</span> Comprehensive Good2Go Score
+        </li>
+      </ul>
+      <a
+        href="https://book.good2go-rth.com"
+        className="inline-flex w-full items-center justify-center gap-2 hover:bg-slate-800 text-sm font-medium text-white bg-slate-900 rounded-lg mt-5 py-2.5"
+      >
+        Book an Assessment
+      </a>
+    </div>
+
+    {/* Efficient Workflow (highlighted) */}
+    <div className="rounded-2xl border-2 border-blue-600 bg-white p-6 shadow-sm">
+      <div className="flex items-center justify-between">
+        <div className="text-base font-semibold">Efficient Workflow</div>
+        <span className="rounded-full bg-blue-50 px-2 py-1 text-xs text-blue-700 ring-1 ring-inset ring-blue-100">Seamless</span>
+      </div>
+      <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+        <li className="flex items-center gap-2">
+          <span className="text-emerald-600">✔</span> Streamlined assessment protocols
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="text-emerald-600">✔</span> Integrates with clinical practice
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="text-emerald-600">✔</span> Continuous monitoring and tracking
+        </li>
+      </ul>
+      <a
+        href="https://book.good2go-rth.com"
+        className="inline-flex w-full items-center justify-center gap-2 hover:bg-blue-700 text-sm font-medium text-white bg-blue-600 rounded-lg mt-5 py-2.5"
+      >
+        Book a Good2Go Test
+      </a>
+    </div>
+
+    {/* Risk Mitigation */}
+    <div className="rounded-2xl border border-slate-200 bg-white p-6">
+      <div className="flex items-center justify-between">
+        <div className="text-base font-semibold">Risk Mitigation</div>
+        <span className="rounded-full bg-slate-100 px-2 py-1 text-xs text-slate-700">Confidence</span>
+      </div>
+      <ul className="mt-4 grid gap-2 text-sm text-slate-700">
+        <li className="flex items-center gap-2">
+          <span className="text-emerald-600">✔</span> Reduce liability with objective data
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="text-emerald-600">✔</span> Research-validated thresholds
+        </li>
+        <li className="flex items-center gap-2">
+          <span className="text-emerald-600">✔</span> Detailed documentation for planning
+        </li>
+      </ul>
+      <a
+        href="https://book.good2go-rth.com"
+        className="inline-flex w-full items-center justify-center gap-2 hover:bg-slate-800 text-sm font-medium text-white bg-slate-900 rounded-lg mt-5 py-2.5"
+      >
+        Talk to Us
+      </a>
+    </div>
+  </div>
+</section>
+
       {/* FOOTER tag line */}
       <footer className="mt-16 mb-10 text-center text-sm text-slate-500">
         Recover Smart. Return Strong.
