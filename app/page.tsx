@@ -204,54 +204,75 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SCIENTIFIC FOUNDATION with chart image ONLY */}
-      <section id="evidence" className="mt-16 lg:mt-24">
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Scientific Foundation</h2>
-            <p className="mt-3 text-slate-600 leading-relaxed">
-              Built on peer‑reviewed research, Good2Go leverages dual‑task gait analysis for superior sensitivity compared
-              to traditional methods.
-            </p>
+      {/* SCIENTIFIC FOUNDATION */}
+<section id="evidence" className="mt-16 lg:mt-24">
+  <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+    Scientific Foundation
+  </h2>
+  <p className="mt-2 text-slate-600">
+    Built on peer-reviewed research, Good2Go leverages dual-task gait analysis for
+    superior sensitivity compared to traditional methods.
+  </p>
 
-            <div className="mt-6">
-              <img
-                src="/science-chart-demo.png"
-                alt="Good2Go Score Progress demo"
-                className="w-full rounded-xl border border-slate-200"
-              />
-            </div>
+  {/* Two columns: LEFT = chart (+ CTA), RIGHT = cards (Key Findings, QA) */}
+  <div className="mt-6 grid gap-6 lg:grid-cols-2 items-start">
+    {/* LEFT: Chart + CTA */}
+    <div className="space-y-4">
+      <div className="rounded-2xl border border-slate-200 bg-white p-3 sm:p-4">
+        <img
+          src="/evidence-chart-demo.png"            // <-- your chart image in /public
+          alt="Good2Go Score Progress"
+          className="w-full rounded-lg"
+        />
+      </div>
 
-            <div className="mt-6 rounded-xl border border-slate-200 p-4 bg-slate-50">
-              <div className="text-sm font-medium">Key Research Findings</div>
-              <ul className="mt-2 grid gap-2 text-sm text-slate-700">
-                <li>• Enhanced Sensitivity: Dual‑task conditions detect concussion‑related deficits that persist longer than single‑task assessments.</li>
-                <li>• Gender‑Based Differences: Study of collegiate athletes established normal values and documented sex‑based recovery differences.</li>
-                <li>• Clinical Validation: Multiple studies show dual‑task gait analysis as a sensitive and specific marker of functional impairment.</li>
-              </ul>
-            </div>
+      <a
+        href="https://book.good2go-rth.com"
+        className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white ring-1 ring-inset ring-blue-600/10 hover:bg-blue-700"
+      >
+        Book a Test
+      </a>
+    </div>
 
-            <div className="mt-6">
-              <a
-                href="https://book.good2go-rth.com"
-                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white ring-1 ring-inset ring-blue-600/10 hover:bg-blue-700"
-              >
-                Book a Test
-              </a>
-            </div>
-          </div>
+    {/* RIGHT: Key Findings + QA Standards stacked */}
+    <div className="space-y-4">
+      <div className="rounded-2xl border border-slate-200 bg-white p-5">
+        <div className="text-sm font-medium">Key Research Findings</div>
+        <ul className="mt-2 grid gap-2 text-sm text-slate-700">
+          <li>
+            <span className="font-medium">Enhanced Sensitivity:</span> Dual-task
+            conditions detect concussion-related deficits that persist longer than
+            single-task assessments.
+          </li>
+          <li>
+            <span className="font-medium">Gender-Based Differences:</span> Study
+            of collegiate athletes established normal values and documented sex-based
+            recovery differences.
+          </li>
+          <li>
+            <span className="font-medium">Clinical Validation:</span> Multiple
+            studies show dual-task gait analysis as a sensitive and specific marker
+            of functional impairment.
+          </li>
+        </ul>
+      </div>
 
-          <div className="grid gap-4">
-            <div className="rounded-2xl border border-slate-200 bg-white p-5">
-              <div className="text-sm font-medium">Quality Assurance Standards</div>
-              <ul className="mt-2 grid gap-2 text-sm text-slate-700">
-                <li>• Minimum 3 peer‑reviewed sources per methodology; thresholds validated against clinical research.</li>
-                <li>• Statistical significance requirements maintained; individual assessments prioritized over population norms.</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="rounded-2xl border border-slate-200 bg-white p-5">
+        <div className="text-sm font-medium">Quality Assurance Standards</div>
+        <ul className="mt-2 grid gap-2 text-sm text-slate-700">
+          <li>
+            Minimum 3 peer-reviewed sources per methodology; thresholds validated
+            against clinical research.
+          </li>
+          <li>
+            Statistical significance requirements maintained; individual assessments
+            prioritized over population norms.
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FOOTER tag line */}
       <footer className="mt-16 mb-10 text-center text-sm text-slate-500">
