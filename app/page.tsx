@@ -95,12 +95,12 @@ export default function Page() {
       healthcare practitioners with objective assessment tools to guide safe
       return-to-activity decisions. Built on peer-reviewed research and
       dual-task gait analysis, Good2Go addresses the critical gap in concussion
-      management through personalized, scientific protocols.
+      management through personalised, scientific protocols.
     </p>
     <p className="mt-3 text-slate-600 leading-relaxed">
       It’s important to get the help you need to heal after a concussion.  Good2Go&apos;s 
-      Dual-task Gait assessment aids a medical practitioner to apply a multidisciplinary 
-      intervention to help you recover sooner.
+      Dual-task Gait assessment aids the healthcare practitioner to apply multidisciplinary 
+      interventions to help you recover sooner.
     </p>  
     <ul className="mt-3 grid gap-2 text-sm text-slate-700">
       <li>Provides healthcare practitioners with objective, defensible data for
