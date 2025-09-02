@@ -69,7 +69,7 @@ export default function Page() {
       </ul>
     <div className="mt-6 flex gap-4">
   <a
-    href="/scientific-foundation"
+    href="/dilemma"
     className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200"
   >
     Learn More
