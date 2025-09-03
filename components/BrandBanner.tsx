@@ -7,7 +7,7 @@ export default function BrandBanner() {
         <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-lg ring-1 ring-white/10 bg-white/5 flex items-center justify-center">
           {/* Make sure this file exists in /public */}
           <Image
-            src="/High-Resolution-Color-Logo.svg"
+            src="/High-Resolution-Color-Logo-on-Transparent-Background.svg"
             alt="Good2Go"
             width={64}
             height={64}
