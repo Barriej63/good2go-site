@@ -8,7 +8,6 @@ export const metadata: Metadata = {
 export default function EvidencePage() {
   return (
     <main>
-      <Header />
       <section className="section">
         <div className="grid gap-8 lg:grid-cols-2">
           <div className="card p-6 sm:p-8">
