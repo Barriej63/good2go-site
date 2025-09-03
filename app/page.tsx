@@ -72,31 +72,43 @@ export default function Page(): JSX.Element {
         solid diagnostic criteria and a reliance on subjective symptom reporting
         rather than objective measures.
       </p>
+
       <ul className="mt-6 grid gap-3 text-sm text-slate-700">
-        <li className="flex items-center gap-2">🌍 70 Million — Annual concussions worldwide across sports, workplace, and home environments</li>
-        <li className="flex items-center gap-2">🏅 3.8 Million — Concussions occur annually in the United States from sports and recreation</li>
-        <li className="flex items-center gap-2">💵 $57 Billion — Estimated economic burden created by concussions in the United States</li>
-        <li className="flex items-center gap-2">🙈 50% — Estimated underreporting rate of concussions</li>
+        <li className="flex items-center gap-2">
+          🌍 70 Million — Annual concussions worldwide across sports, workplace, and home environments
+        </li>
+        <li className="flex items-center gap-2">
+          🏅 3.8 Million — Concussions occur annually in the United States from sports and recreation
+        </li>
+        <li className="flex items-center gap-2">
+          💵 $57 Billion — Estimated economic burden created by concussions in the United States
+        </li>
+        <li className="flex items-center gap-2">
+          🙈 50% — Estimated underreporting rate of concussions
+        </li>
       </ul>
-    <div className="mt-6 flex gap-4">
-  <a
-    href="/dilemma"
-    className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200"
-  >
-    Learn More
-  </a>
-  <a
-    href="https://book.good2go-rth.com"
-    className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-  >
-    Book a Test
-  </a>
-</div>
+
+      <div className="mt-6 flex gap-4">
+        <a
+          href="/dilemma"
+          className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200"
+        >
+          Learn More
+        </a>
+        <a
+          href="https://book.good2go-rth.com"
+          className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+        >
+          Book a Test
+        </a>
+      </div>
+    </div>{/* <-- CLOSE the LEFT column div (this was missing) */}
 
     {/* RIGHT: Image */}
     <div className="rounded-3xl border border-slate-200 overflow-hidden">
+      {/* make sure this file exists in /public as /crisis-graphic.png */}
       <img
-        src="/crisis-graphic.png"   // make sure this file is in /public
+        src="/crisis-graphic.png"
         alt="Concussions by the Numbers"
         className="w-full h-full object-cover"
       />
