@@ -1,14 +1,30 @@
+import Image from "next/image";
+
 export default function BrandBanner() {
   return (
-    <div className="mb-10 flex items-center justify-center rounded-2xl bg-gradient-to-r from-slate-900 to-blue-800 p-6 shadow-md">
-      <img
-        src="/High-Resolution-Color-Logo-on-Transparent-Background.svg"   // make sure your file is in /public
-        alt="Good2Go Logo"
-        className="h-12 w-auto sm:h-16"
-      />
-      <span className="ml-4 text-lg font-semibold text-white tracking-wide">
-        Evidence-Based Concussion Recovery
-      </span>
+    <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-900 p-6 sm:p-8">
+      <div className="flex items-center gap-4">
+        <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-lg ring-1 ring-white/10 bg-white/5 flex items-center justify-center">
+          {/* Make sure this file exists in /public */}
+          <Image
+            src="/High-Resolution-Color-Logo.svg"
+            alt="Good2Go"
+            width={64}
+            height={64}
+            priority
+          />
+        </div>
+        <div>
+          <p className="text-white text-xl sm:text-2xl font-semibold leading-tight">
+            Good2Go
+          </p>
+          <p className="text-indigo-200/90 text-sm">Concussion Recovery</p>
+        </div>
+      </div>
+
+      {/* decorative glow */}
+      <div className="pointer-events-none absolute inset-0 [mask-image:radial-gradient(60%_50%_at_0%_0%,black,transparent)] bg-[radial-gradient(600px_300px_at_0%_0%,rgba(99,102,241,.18),transparent)]" />
     </div>
   );
 }
+
