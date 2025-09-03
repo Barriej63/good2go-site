@@ -1,8 +1,8 @@
 'use client';
 
 import Header from '@/components/Header';
-import Image from 'next/image'; // optional (you’re using <img>, so you can remove this if unused)
-import Link from 'next/link';   // optional
+import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Page(): JSX.Element {
   return (
@@ -10,99 +10,79 @@ export default function Page(): JSX.Element {
       <Header />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-slate-900">
+        {/* HERO */}
+        <section className="relative isolate overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
+          <div className="grid gap-10 md:grid-cols-2 md:gap-8 md:p-4">
+            {/* Left side: Text */}
+            <div className="flex flex-col justify-center">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
+                Objective Concussion Recovery Monitoring
+              </h1>
+              <p className="mt-3 text-xl text-slate-800">
+                Recover Smart. Return Strong.
+              </p>
+              <p className="mt-2 text-slate-600">
+                Welcome to Good2Go — your concussion recovery partner.
+              </p>
+            </div>
 
-     {/* HERO */}
-<section className="relative isolate overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
-  <div className="grid gap-10 md:grid-cols-2 md:gap-8 md:p-4">
-    {/* Left side: Text */}
-    <div className="flex flex-col justify-center">
-      <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight">
-        Objective Concussion Recovery Monitoring
-      </h1>
-      <p className="mt-3 text-xl text-slate-800">
-        Recover Smart. Return Strong.
-      </p>
-      <p className="mt-2 text-slate-600">
-        Welcome to Good2Go — your concussion recovery partner.
-      </p>
-    </div>
+            {/* Right side: Image */}
+            <div className="relative overflow-hidden rounded-2xl border border-slate-200">
+              <img
+                src="https://images.unsplash.com/photo-1516670428252-df97bba108d1?w=1200&q=80&auto=format&fit=crop"
+                alt="Clinician reviewing dual-task gait assessment"
+                className="h-full w-full object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
+              <div className="absolute bottom-4 left-4 right-4">
+                <div className="inline-flex items-center gap-2 rounded-xl bg-white/90 px-3 py-2 text-xs font-medium text-slate-700 ring-1 ring-inset ring-slate-200 backdrop-blur">
+                  <i data-lucide="activity" className="h-4 w-4 text-blue-700"></i>
+                  Dual-task gait · objective recovery metrics
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-    {/* Right side: Image */}
-    <div className="relative overflow-hidden rounded-2xl border border-slate-200">
-      <img
-        src="https://images.unsplash.com/photo-1516670428252-df97bba108d1?w=1200&q=80&auto=format&fit=crop"
-        alt="Clinician reviewing dual-task gait assessment"
-        className="h-full w-full object-cover"
-      />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent"></div>
-      <div className="absolute bottom-4 left-4 right-4">
-        <div className="inline-flex items-center gap-2 rounded-xl bg-white/90 px-3 py-2 text-xs font-medium text-slate-700 ring-1 ring-inset ring-slate-200 backdrop-blur">
-          <i data-lucide="activity" className="h-4 w-4 text-blue-700"></i>
-          Dual-task gait · objective recovery metrics
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        {/* CRISIS (image on the right, text left) */}
+        <section id="crisis" className="mt-16 lg:mt-24">
+          <div className="grid md:grid-cols-2 gap-8 items-start">
+            {/* LEFT: Text content */}
+            <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
+              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+                The Global Concussion Dilemma
+              </h2>
+              <p className="mt-4 text-slate-600 leading-relaxed">
+                For those unfortunate to have suffered a concussion, the difficulty is
+                knowing when it's safe to return to activities, and uncertainty around
+                their recovery progress. For health practitioners, there is a lack of
+                solid diagnostic criteria and a reliance on subjective symptom reporting
+                rather than objective measures.
+              </p>
 
-    {/* CRISIS (image on the right, text left) */}
-<section id="crisis" className="mt-16 lg:mt-24">
-  <div className="grid md:grid-cols-2 gap-8 items-start">
-    {/* LEFT: Text content */}
-    <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
-      <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-        The Global Concussion Dilemma
-      </h2>
-      <p className="mt-4 text-slate-600 leading-relaxed">
-        For those unfortunate to have suffered a concussion, the difficulty is
-        knowing when it's safe to return to activities, and uncertainty around
-        their recovery progress. For health practitioners, there is a lack of
-        solid diagnostic criteria and a reliance on subjective symptom reporting
-        rather than objective measures.
-      </p>
+              <ul className="mt-6 grid gap-3 text-sm text-slate-700">
+                <li className="flex items-center gap-2">🌍 70 Million — Annual concussions worldwide across sports, workplace, and home environments</li>
+                <li className="flex items-center gap-2">🏅 3.8 Million — Concussions occur annually in the United States from sports and recreation</li>
+                <li className="flex items-center gap-2">💵 $57 Billion — Estimated economic burden created by concussions in the United States</li>
+                <li className="flex items-center gap-2">🙈 50% — Estimated underreporting rate of concussions</li>
+              </ul>
 
-      <ul className="mt-6 grid gap-3 text-sm text-slate-700">
-        <li className="flex items-center gap-2">
-          🌍 70 Million — Annual concussions worldwide across sports, workplace, and home environments
-        </li>
-        <li className="flex items-center gap-2">
-          🏅 3.8 Million — Concussions occur annually in the United States from sports and recreation
-        </li>
-        <li className="flex items-center gap-2">
-          💵 $57 Billion — Estimated economic burden created by concussions in the United States
-        </li>
-        <li className="flex items-center gap-2">
-          🙈 50% — Estimated underreporting rate of concussions
-        </li>
-      </ul>
+              <div className="mt-6 flex gap-4">
+                <a href="/dilemma" className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200">
+                  Learn More
+                </a>
+                <a href="https://book.good2go-rth.com" className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700">
+                  Book a Test
+                </a>
+              </div>
+            </div>
 
-      <div className="mt-6 flex gap-4">
-        <a
-          href="/dilemma"
-          className="rounded-lg bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-200"
-        >
-          Learn More
-        </a>
-        <a
-          href="https://book.good2go-rth.com"
-          className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
-        >
-          Book a Test
-        </a>
-      </div>
-    </div>{/* <-- CLOSE the LEFT column div (this was missing) */}
-
-    {/* RIGHT: Image */}
-    <div className="rounded-3xl border border-slate-200 overflow-hidden">
-      {/* make sure this file exists in /public as /crisis-graphic.png */}
-      <img
-        src="/crisis-graphic.png"
-        alt="Concussions by the Numbers"
-        className="w-full h-full object-cover"
-      />
-    </div>
-  </div>
-</section>
+            {/* RIGHT: Image */}
+            <div className="rounded-3xl border border-slate-200 overflow-hidden">
+              <img src="/crisis-graphic.png" alt="Concussions by the Numbers" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </section>
 
       {/* OUR SOLUTION */}
 <section id="our-solution" className="mt-16 lg:mt-24">
@@ -386,9 +366,10 @@ export default function Page(): JSX.Element {
 </section>
 
       {/* FOOTER tag line */}
-      <footer className="mt-16 mb-10 text-center text-sm text-slate-500">
-        Recover Smart. Return Strong.
-      </footer>
-    </main>
+        <footer className="mt-16 mb-10 text-center text-sm text-slate-500">
+          Recover Smart. Return Strong.
+        </footer>
+      </main>
+    </>
   );
 }
