@@ -1,3 +1,6 @@
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+  
 export const metadata = {
   title: "How it Works | Good2Go",
   description: "Overview of Good2Go dual-task gait assessment workflow."
