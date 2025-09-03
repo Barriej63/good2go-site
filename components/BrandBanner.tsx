@@ -4,7 +4,7 @@ export default function BrandBanner() {
   return (
     <div className="relative overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-r from-slate-900 via-slate-800 to-indigo-900 p-6 sm:p-8">
       <div className="flex items-center gap-4">
-        <div className="relative h-14 w-14 sm:h-16 sm:w-16 rounded-lg ring-1 ring-white/10 bg-white/5 flex items-center justify-center">
+        <div className="relative h-20 w-20 sm:h-24 sm:w-24 rounded-lg ring-1 ring-white/10 bg-white/5 flex items-center justify-center">
           {/* Ensure this file exists in /public */}
           <Image
             src="/High-Resolution-Color-Logo-on-Transparent-Background.svg"
