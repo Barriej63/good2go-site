@@ -9,8 +9,8 @@ export default function BrandBanner() {
           <Image
             src="/High-Resolution-Color-Logo-on-Transparent-Background.svg"
             alt="Good2Go"
-            width={64}
-            height={64}
+            width={72}
+            height={72}
             priority
           />
         </div>
