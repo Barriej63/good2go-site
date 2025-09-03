@@ -4,7 +4,6 @@
 export default function PricingPage() {
   return (
     <main>
-      <Header />
       <section className="section">
         <div className="card p-6 sm:p-10">
           <div className="flex flex-wrap items-end justify-between gap-4">
