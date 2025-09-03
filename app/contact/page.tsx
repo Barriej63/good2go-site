@@ -35,19 +35,13 @@ export default function ContactPage() {
     }
   }
 
+  import BrandBanner from "@/components/BrandBanner";
+
+export default function ContactPage() {
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-slate-900">
+      <BrandBanner />
       <h1 className="text-3xl font-semibold tracking-tight mb-6">Contact Us</h1>
-      {/* Branded banner */}
-<div className="mb-10 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-center shadow-md">
-  <h2 className="text-xl font-semibold text-white">
-    Recover Smart. Return Strong.
-  </h2>
-  <p className="mt-2 text-blue-100 text-sm">
-    Your partner in safe, evidence-based concussion recovery.
-  </p>
-</div>
-
       <p className="mb-8 text-slate-600">
         Have questions about Good2Go or want to request a demo? Fill out the form
         below and our team will respond within one business day.
