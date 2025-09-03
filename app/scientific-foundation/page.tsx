@@ -1,4 +1,4 @@
-'use client';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: 'Scientific Foundation — Good2Go',
