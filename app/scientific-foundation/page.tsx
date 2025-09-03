@@ -1,3 +1,4 @@
+'use client';
 
 export const metadata: Metadata = {
   title: 'Scientific Foundation — Good2Go',
