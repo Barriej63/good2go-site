@@ -1,62 +1,53 @@
-import { NextRequest, NextResponse } from 'next/server';
+// app/api/contact/route.ts
+import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 import sgMail from '@sendgrid/mail';
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY || '');
+// Force Node runtime (SendGrid needs Node, not Edge)
+export const runtime = 'nodejs';
 
-const clean = (v: unknown) =>
-  typeof v === 'string' ? v.replace(/[<>]/g, '').trim().slice(0, 4000) : '';
+const API_KEY = process.env.SENDGRID_API_KEY;
+const FROM = process.env.SENDGRID_FROM;
+const TO = process.env.SENDGRID_TO;
+
+if (!API_KEY || !FROM || !TO) {
+  // surface misconfig early in logs
+  console.error('Missing SENDGRID_* env vars');
+}
+
+sgMail.setApiKey(API_KEY || '');
 
 export async function POST(req: NextRequest) {
   try {
-    let payload: Record<string, any> = {};
-    const type = req.headers.get('content-type') || '';
-    if (type.includes('application/json')) {
-      payload = await req.json();
-    } else {
-      const form = await req.formData();
-      payload = Object.fromEntries(form as any);
-    }
-
-    if (payload.website) return NextResponse.json({ ok: true }); // honeypot
-
-    const name = clean(payload.name);
-    const email = clean(payload.email);
-    const company = clean(payload.company);
-    const message = clean(payload.message);
-    const topic = clean(payload.topic || '');
-    const context = clean(payload.context || 'good2go');
+    const form = await req.formData();
+    const name = String(form.get('name') || '');
+    const email = String(form.get('email') || '');
+    const company = String(form.get('company') || '');
+    const message = String(form.get('message') || '');
 
     if (!name || !email || !message) {
-      return NextResponse.json({ ok: false, error: 'Missing required fields' }, { status: 400 });
+      return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 });
     }
 
-    const to = process.env.SENDGRID_TO || '';
-    const from = process.env.SENDGRID_FROM || '';
-    if (!to || !from || !(process.env.SENDGRID_API_KEY || '')) {
-      return NextResponse.json({ ok: false, error: 'Email not configured' }, { status: 500 });
-    }
-
-    const subject = topic ? `Good2Go Contact: ${topic}` : 'Good2Go Contact Form';
-    await sgMail.send({
-      to,
-      from,
-      subject,
+    const msg = {
+      to: TO!,
+      from: FROM!, // must be a verified sender or domain in SendGrid
       replyTo: email,
-      text: `Context: ${context}\nFrom: ${name} <${email}>\nCompany: ${company || '-'}\n\n${message}`,
-      html: `<div style="font-family:Inter,ui-sans-serif,system-ui;line-height:1.6">
-              <h2 style="margin:0 0 8px">New contact request</h2>
-              <p><strong>Context:</strong> ${context}</p>
-              ${topic ? `<p><strong>Topic:</strong> ${topic}</p>` : ''}
-              <p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
-              ${company ? `<p><strong>Company:</strong> ${company}</p>` : ''}
-              <p style="margin:12px 0 4px"><strong>Message:</strong></p>
-              <p style="white-space:pre-wrap">${message}</p>
-            </div>`,
-    });
+      subject: `Good2Go contact: ${name}`,
+      text: `From: ${name} <${email}>\nCompany: ${company}\n\n${message}`,
+      html: `
+        <p><strong>From:</strong> ${name} &lt;${email}&gt;</p>
+        <p><strong>Company:</strong> ${company || '—'}</p>
+        <p>${message.replace(/\n/g, '<br/>')}</p>
+      `,
+    };
+
+    await sgMail.send(msg);
 
     return NextResponse.json({ ok: true });
-  } catch (e) {
-    console.error('SendGrid contact error', e);
-    return NextResponse.json({ ok: false, error: 'Server error' }, { status: 500 });
+  } catch (err: any) {
+    // SendGrid puts useful info on err.response.body
+    console.error('Contact API error:', err?.response?.body || err);
+    return NextResponse.json({ error: 'Mail send failed.' }, { status: 500 });
   }
 }
