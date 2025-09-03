@@ -1,8 +1,4 @@
 
-import type { Metadata } from 'next'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-
 export const metadata: Metadata = {
   title: 'Scientific Foundation — Good2Go',
   description: 'Peer-reviewed evidence and dual-task gait analysis supporting Good2Go’s concussion recovery monitoring.'
