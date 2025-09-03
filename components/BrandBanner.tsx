@@ -16,9 +16,7 @@ export default function BrandBanner() {
         </div>
         <div>
           <p className="text-white text-xl sm:text-2xl font-semibold leading-tight">
-            Good2Go
-          </p>
-          <p className="text-indigo-200/90 text-sm">Concussion Recovery</p>
+            Your Partner in Evidence Based Concussion Recovery
         </div>
       </div>
 
