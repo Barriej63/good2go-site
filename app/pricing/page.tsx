@@ -1,6 +1,5 @@
 
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
+'use client';
 
 export default function PricingPage() {
   return (
@@ -43,7 +42,6 @@ export default function PricingPage() {
           </div>
         </div>
       </section>
-      <Footer />
     </main>
   )
 }
