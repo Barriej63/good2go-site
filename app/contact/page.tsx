@@ -45,7 +45,7 @@ export default function ContactPage() {
 
       <form
         onSubmit={handleSubmit}
-        className="grid gap-6 bg-white p-6 rounded-2xl border border-slate-200 shadow-sm"
+        className="grid gap-6 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-8 rounded-2xl border border-slate-200 shadow-lg"
       >
         <div>
           <label className="mb-1 block text-sm font-medium text-slate-700">Full Name</label>
