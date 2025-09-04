@@ -69,7 +69,7 @@ export default function OurSolutionPage() {
         <div className="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50">
           <div className="relative w-full h-64">
             <Image
-              src="/solution1.jpg" // add your file to /public
+              src="/solution1.webp" // add your file to /public
               alt="Good2Go solution visual 1"
               fill
               className="object-cover"
