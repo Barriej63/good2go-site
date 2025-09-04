@@ -7,7 +7,6 @@ import Link from 'next/link';
 export default function Page(): JSX.Element {
   return (
     <>
-      <Header />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-slate-900">
         {/* HERO */}
