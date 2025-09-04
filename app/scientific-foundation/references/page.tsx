@@ -12,8 +12,8 @@ export default function ReferencesPage() {
     <main className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-slate-900">
       <h1 className="text-3xl font-semibold tracking-tight">Scientific References</h1>
       <p className="mt-2 text-slate-600">
-        The following peer-reviewed sources underpin Good2Go’s dual-task gait assessment, clinical implementation
-        guidance, and dashboard methodology.
+        The following peer-reviewed sources underpin Good2Go’s dual-task gait assessment, and clinical implementation
+        guidance.
       </p>
 
       {/* PRIMARY LITERATURE */}
