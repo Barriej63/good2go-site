@@ -120,7 +120,7 @@ export default function DilemmaPage() {
           <div className="relative w-full h-64">
             {/* Replace with your image later: /public/dilemma2.(jpg|png|svg) */}
             <Image
-              src="/dilemma2.jpg"
+              src="/dilemma2.jpeg"
               alt="Concussion context visual 2"
               fill
               priority={false}
