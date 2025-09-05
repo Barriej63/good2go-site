@@ -52,8 +52,8 @@ export default function Page(): JSX.Element {
                 The Global Concussion Dilemma
               </h2>
               <p className="mt-4 text-slate-600 leading-relaxed">
-                For those unfortunate to have suffered a concussion, the difficulty is
-                knowing when it's safe to return to activities, and uncertainty around
+                For those unfortunate to have suffered a concussion, <strong>the difficulty is
+                knowing when it's safe to return to activities,</strong> and uncertainty around
                 their recovery progress. For health practitioners, there is a lack of
                 solid diagnostic criteria and a reliance on subjective symptom reporting
                 rather than objective measures.
