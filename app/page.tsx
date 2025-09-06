@@ -99,6 +99,7 @@ export default function Page(): JSX.Element {
     </p>
     <p className="mt-3 text-slate-600 leading-relaxed">
       Good2Go provides two options:
+      </p>
       <p className="mt-3 text-slate-600 leading-relaxed">
       1. Post-concussion testing to monitor recovery trends with or without a baseline, and ensures a safe return to health.
     </p>
