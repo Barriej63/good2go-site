@@ -98,9 +98,9 @@ export default function Page(): JSX.Element {
       management through personalised, scientific protocols.
     </p>
     <p className="mt-3 text-slate-600 leading-relaxed">
-      Good2Go provides 2 options
-      Post-concussion testing has structured follow‑ups to monitor recovery trends — with or without a baseline.
-      Baseline Testing is available, to record healthy brain function which establishes your personal comparison point.
+      Good2Go provides 2 options-
+      1. Post-concussion testing which has structured follow‑ups to monitor recovery trends — with or without a baseline, and ensures a safe return to health.
+      2. Baseline Testing is available, to record healthy brain function which establishes your personal comparison point.
     </p>
     <p className="mt-3 text-slate-600 leading-relaxed">
       It’s important to get the professional help you need to heal after a concussion.  Good2Go&apos;s 
