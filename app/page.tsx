@@ -102,7 +102,7 @@ export default function Page(): JSX.Element {
       <p className="mt-3 text-slate-600 leading-relaxed">
       1. Post-concussion testing to monitor recovery trends with or without a baseline, and ensures a safe return to health.
     </p>
-      <p className="mt-3 text-slate-600 leading-relaxed">
+    <p className="mt-3 text-slate-600 leading-relaxed">
       2. Baseline Testing is available prior, to record healthy brain function and establish a personal comparison point if preferred.
     </p>
     <p className="mt-3 text-slate-600 leading-relaxed">
