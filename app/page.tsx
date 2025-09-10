@@ -127,16 +127,16 @@ export default function Page(): JSX.Element {
   >
     Book an Assessment
           </a>
-  <div className="mt-6">
+<div className="mt-6">
   <a
     href="https://good2go-rth.com/our-solution"
     className="inline-flex items-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
   >
     Learn More
-          </a>
-         </div>
-        </div>
-      </section>
+     </a>
+    </div>
+  </div>
+</section>
 
       {/* CORE FEATURES */}
       <section id="features" className="mt-16 lg:mt-24">
