@@ -88,7 +88,8 @@ export default function Page(): JSX.Element {
   <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-8">
     <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Our Solution</h2>
     <p className="mt-3 text-slate-600 leading-relaxed">
-      Monitor patients with Good2Go&apos;s Dual-task Gait assessment.
+      Monitor patients with Good2Go&apos;s Dual-task Gait assessment.  Patients and Healthcare Practitioners can then <strong>view the reults of the 
+      assessments in an easy to understand dashboard, which shows progress towards recovery and what areas may need to be worked on</strong>. 
     </p>
     <p className="mt-3 text-slate-600 leading-relaxed">
       Good2Go is an evidence-based concussion monitoring platform that empowers
