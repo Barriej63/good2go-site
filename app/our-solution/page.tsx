@@ -18,7 +18,7 @@ export default function OurSolutionPage() {
           <div>
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Our Solution</h1>
             <p className="mt-2 text-slate-600">
-              Objective monitoring, personalized recovery, and confident decisions.
+              <strong>Objective monitoring, personalised recovery, and confident decisions to support a safe return to health</strong>.
             </p>
           </div>
           <div className="flex items-center gap-3">
