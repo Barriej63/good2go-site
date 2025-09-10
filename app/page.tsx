@@ -115,25 +115,35 @@ export default function Page(): JSX.Element {
 </p>
 
 <ul className="mt-3 grid gap-2 text-sm text-slate-700">
-  <li>Provides healthcare practitioners with objective, defensible data for safe return-to-activity decisions.</li>
-  <li>Gives patients clear, understandable information showing where they are on their return-to-health journey.</li>
-  <li>Improves patient confidence in their care team and path to recovery.</li>
-</ul>
+      <li>
+        Provides healthcare practitioners with objective, defensible data for
+        safe return-to-activity decisions.
+      </li>
+      <li>
+        Gives patients clear, understandable information showing where they are
+        on their return-to-health journey.
+      </li>
+      <li>
+        Improves patient confidence in their care team and path to recovery.
+      </li>
+    </ul>
 
-<div className="mt-5">
-  <a
-    href="https://book.good2go-rth.com"
-    className="inline-flex items-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700"
-  >
-    Book an Assessment
-          </a>
-<div className="mt-6">
-  <a
-    href="https://good2go-rth.com/our-solution"
-    className="inline-flex items-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
-  >
-    Learn More
-     </a>
+    {/* Buttons */}
+    <div className="mt-5 flex flex-wrap gap-4">
+      <a
+        href="https://book.good2go-rth.com"
+        className="inline-flex items-center rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700"
+      >
+        Book an Assessment
+      </a>
+
+      <a
+        href="https://good2go-rth.com/our-solution"
+        className="inline-flex items-center rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
+      >
+        Learn More
+      </a>
+    </div>
   </div>
 </section>
 
