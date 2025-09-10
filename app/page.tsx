@@ -134,7 +134,6 @@ export default function Page(): JSX.Element {
   >
     Learn More
      </a>
-    </div>
   </div>
 </section>
 
