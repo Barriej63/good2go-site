@@ -11,6 +11,7 @@ const nav = [
   { href: "/our-solution", label: "Our Solution" },
   { href: "/how-it-works", label: "How it Works" },
   { href: "/scientific-foundation", label: "Scientific Foundation" },
+  { href: "/our-why", label: "Our Why" },
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
   { href: "https://book.good2go-rth.com", label: "Book", external: true },
