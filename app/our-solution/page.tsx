@@ -103,107 +103,85 @@ export default function OurSolutionPage() {
         </div>
       </section>
 
-      {/* Good2Go Concussion Recovery Dashboard (4 visuals + explanations) */}
-      <section className="mt-12">
-        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Good2Go Concussion Recovery Dashboard</h2>
-        <p className="mt-2 text-slate-700">Visual insights that make recovery status clear to clinicians and patients.</p>
+     {/* Good2Go Concussion Recovery Dashboard (4 visuals + explanations) */}
+<section className="mt-12">
+  <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-center">
+    Good2Go Concussion Recovery Dashboard
+  </h2>
+  <p className="mt-2 text-slate-600 text-center max-w-3xl mx-auto">
+    Visuals that help clinicians and patients track recovery progress with clear, objective metrics.
+  </p>
 
-        {/* Current Performance */}
-        <div className="mt-6 grid gap-6 lg:grid-cols-2 items-start">
-          <div className="rounded-2xl border border-slate-200 bg-white p-4">
-            <div className="relative w-full overflow-hidden rounded-xl border border-slate-200">
-              <Image
-                src="/demo2 currentperformance.png"
-                alt="Current performance dashboard cards"
-                width={1200}
-                height={800}
-                className="w-full h-auto"
-                priority
-              />
-            </div>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-indigo-50/60 p-6">
-            <h3 className="text-lg font-semibold">Current Performance Cards</h3>
-            <p className="mt-2 text-slate-700">
-              These cards show the most recent test score relative to personalised targets.{" "}
-              <span className="font-medium">Balance Score</span> measures postural stability during dynamic tasks.{" "}
-              <span className="font-medium">Gait Speed Score</span> evaluates walking speed under dual-task conditions.{" "}
-              <span className="font-medium">Good2Go Score</span> combines both metrics for overall recovery assessment.
-            </p>
-            <ul className="mt-4 grid gap-2 text-sm text-slate-700">
-              <li><span className="font-medium text-emerald-700">Green</span> = Good2Go for progressing activity.</li>
-              <li><span className="font-medium text-amber-700">Orange</span> = More monitoring needed.</li>
-              <li><span className="font-medium text-rose-700">Red</span> = Specific attention required—review protocols.</li>
-            </ul>
-          </div>
-        </div>
+  <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+    {/* Card 1 */}
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="relative w-full h-56">
+        <Image
+          src="/demo2-currentperformance.png"
+          alt="Current performance scores"
+          fill
+          className="object-cover rounded-lg"
+        />
+      </div>
+      <p className="mt-3 text-sm text-slate-700">
+        Cards show most recent test scores relative to targets. 
+        <span className="font-medium text-emerald-600"> Green</span> = Good2Go, 
+        <span className="font-medium text-amber-500"> Orange</span> = monitor closely, 
+        <span className="font-medium text-rose-600"> Red</span> = requires attention.
+      </p>
+    </div>
 
-        {/* New Norm vs Baseline */}
-        <div className="mt-6 grid gap-6 lg:grid-cols-2 items-start">
-          <div className="rounded-2xl border border-slate-200 bg-white p-4">
-            <div className="relative w-full overflow-hidden rounded-xl border border-slate-200">
-              <Image
-                src="/demo2-newnorm-v-baseline.png"
-                alt="New norm vs baseline chart"
-                width={1200}
-                height={800}
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-emerald-50/60 p-6">
-            <h3 className="text-lg font-semibold">New Norm vs Baseline</h3>
-            <p className="mt-2 text-slate-700">
-              Patients can exceed baseline and establish a <span className="font-medium">new norm</span>, representing recovered
-              individual capacity.
-            </p>
-          </div>
-        </div>
+    {/* Card 2 */}
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="relative w-full h-56">
+        <Image
+          src="/demo2-newnorm-v-baseline.png"
+          alt="New norm vs baseline"
+          fill
+          className="object-cover rounded-lg"
+        />
+      </div>
+      <p className="mt-3 text-sm text-slate-700">
+        Shows how patients can exceed baseline and establish a 
+        <span className="font-medium"> new norm</span>, 
+        representing recovery of individual capacity.
+      </p>
+    </div>
 
-        {/* Predicted Target (no baseline) */}
-        <div className="mt-6 grid gap-6 lg:grid-cols-2 items-start">
-          <div className="rounded-2xl border border-slate-200 bg-white p-4">
-            <div className="relative w-full overflow-hidden rounded-xl border border-slate-200">
-              <Image
-                src="/demopatient-speedscore.png"
-                alt="Predicted target without baseline"
-                width={1200}
-                height={800}
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-amber-50/60 p-6">
-            <h3 className="text-lg font-semibold">Predicted Target (No Baseline)</h3>
-            <p className="mt-2 text-slate-700">
-              When a baseline isn’t available, Good2Go generates a <span className="font-medium">predicted score and range</span> so
-              a meaningful target is set—and progress can be tracked toward it.
-            </p>
-          </div>
-        </div>
+    {/* Card 3 */}
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="relative w-full h-56">
+        <Image
+          src="/demopatient-speedscore.png"
+          alt="Patient speed score"
+          fill
+          className="object-cover rounded-lg"
+        />
+      </div>
+      <p className="mt-3 text-sm text-slate-700">
+        Predicted targets are generated if no baseline exists. 
+        This patient is still <span className="font-medium">tracking positively</span> 
+        toward recovery.
+      </p>
+    </div>
 
-        {/* Balance target reached */}
-        <div className="mt-6 grid gap-6 lg:grid-cols-2 items-start">
-          <div className="rounded-2xl border border-slate-200 bg-white p-4">
-            <div className="relative w-full overflow-hidden rounded-xl border border-slate-200">
-              <Image
-                src="/demopatient-balancescore.png"
-                alt="Balance target reached without baseline"
-                width={1200}
-                height={800}
-                className="w-full h-auto"
-              />
-            </div>
-          </div>
-          <div className="rounded-2xl border border-slate-200 bg-purple-50/60 p-6">
-            <h3 className="text-lg font-semibold">Balance Target Reached</h3>
-            <p className="mt-2 text-slate-700">
-              Even without a baseline, once scores normalise, a <span className="font-medium">new norm</span> is established and
-              displayed—supporting confident decisions.
-            </p>
-          </div>
-        </div>
-      </section>
+    {/* Card 4 */}
+    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+      <div className="relative w-full h-56">
+        <Image
+          src="/demopatient-balancescore.png"
+          alt="Patient balance score"
+          fill
+          className="object-cover rounded-lg"
+        />
+      </div>
+      <p className="mt-3 text-sm text-slate-700">
+        Balance score approaching the <span className="font-medium">target range</span>. 
+        When normalised, a new norm is established for continued monitoring.
+      </p>
+    </div>
+  </div>
+</section>
 
       {/* Sports Organization Value Proposition (unchanged) */}
       <section className="mt-12 grid gap-6 lg:grid-cols-2">
