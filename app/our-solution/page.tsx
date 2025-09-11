@@ -103,7 +103,7 @@ export default function OurSolutionPage() {
         </div>
       </section>
 
-     {/* Good2Go Concussion Recovery Dashboard (4 visuals + explanations) */}
+    {/* Good2Go Concussion Recovery Dashboard (4 visuals + explanations, 2x2 layout) */}
 <section className="mt-12">
   <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-center">
     Good2Go Concussion Recovery Dashboard
@@ -112,10 +112,10 @@ export default function OurSolutionPage() {
     Visuals that help clinicians and patients track recovery progress with clear, objective metrics.
   </p>
 
-  <div className="mt-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+  <div className="mt-8 grid gap-8 sm:grid-cols-2">
     {/* Card 1 */}
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="relative w-full h-56">
+      <div className="relative w-full h-64">
         <Image
           src="/demo2-currentperformance.png"
           alt="Current performance scores"
@@ -133,7 +133,7 @@ export default function OurSolutionPage() {
 
     {/* Card 2 */}
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="relative w-full h-56">
+      <div className="relative w-full h-64">
         <Image
           src="/demo2-newnorm-v-baseline.png"
           alt="New norm vs baseline"
@@ -150,7 +150,7 @@ export default function OurSolutionPage() {
 
     {/* Card 3 */}
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="relative w-full h-56">
+      <div className="relative w-full h-64">
         <Image
           src="/demopatient-speedscore.png"
           alt="Patient speed score"
@@ -167,7 +167,7 @@ export default function OurSolutionPage() {
 
     {/* Card 4 */}
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="relative w-full h-56">
+      <div className="relative w-full h-64">
         <Image
           src="/demopatient-balancescore.png"
           alt="Patient balance score"
