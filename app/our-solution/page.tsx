@@ -112,24 +112,25 @@ export default function OurSolutionPage() {
     Visuals that help clinicians and patients track recovery progress with clear, objective metrics.
   </p>
 
-  <div className="mt-8 grid gap-8 sm:grid-cols-2">
-    {/* Card 1 */}
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="relative w-full h-64">
-        <Image
-          src="/demo2-currentperformance.png"
-          alt="Current performance scores"
-          fill
-          className="object-cover rounded-lg"
-        />
-      </div>
-      <p className="mt-3 text-sm text-slate-700">
-        Cards show most recent test scores relative to targets. 
-        <span className="font-medium text-emerald-600"> Green</span> = Good2Go, 
-        <span className="font-medium text-amber-500"> Orange</span> = monitor closely, 
-        <span className="font-medium text-rose-600"> Red</span> = requires attention.
-      </p>
+  {/* Card 1 with horizontal scroll for mobile */}
+<div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+  <div className="relative w-full h-64 overflow-x-auto">
+    <div className="min-w-[500px] h-64 relative">
+      <Image
+        src="/demo2-currentperformance.png"
+        alt="Current performance scores"
+        fill
+        className="object-contain rounded-lg"
+      />
     </div>
+  </div>
+  <p className="mt-3 text-sm text-slate-700">
+    Cards show most recent test scores relative to targets. 
+    <span className="font-medium text-emerald-600"> Green</span> = Good2Go, 
+    <span className="font-medium text-amber-500"> Orange</span> = monitor closely, 
+    <span className="font-medium text-rose-600"> Red</span> = requires attention.
+  </p>
+</div>
 
     {/* Card 2 */}
     <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
