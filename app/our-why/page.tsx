@@ -34,7 +34,7 @@ export default function OurWhyPage() {
         </p>
         <p className="mt-4 text-slate-700 leading-relaxed">
           We have undertaken research projects in partnership with AUT,
-          involving multiple sports, hundreds of participants, over the last 3
+          involving multiple sports, hundreds of participants, over the last 4
           years. During this time we have developed the Good2Go concussion
           monitoring system alongside the traditional Sports Concussion
           Assessment Tool (SCAT6 / SCOAT6), and the Rapid eye movement test
@@ -44,8 +44,8 @@ export default function OurWhyPage() {
           were easy to follow and understand.
         </p>
         <p className="mt-4 text-slate-700 leading-relaxed">
-          The primary objective was to have a solution to help healthcare
-          practitioners ensure a safe return to health for those who have
+          The primary objective was to have a <strong>solution to help healthcare
+          practitioners ensure a safe return to health</strong> for those who have
           suffered a concussion in sport, work or home.
         </p>
       </section>
