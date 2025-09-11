@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Good2Go’s AI-Enhanced Dual-Task Gait Technology: objective concussion monitoring, personalized recovery, and clinical decision support.",
 };
 
-export default function OurSolutionPage() {
+export default function OurSolutionPage(): JSX.Element {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 text-slate-900">
       {/* Intro / Hero */}
@@ -19,8 +19,9 @@ export default function OurSolutionPage() {
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">Our Solution</h1>
             <p className="mt-2 text-slate-600">
               <strong>
-                Objective monitoring, personalised recovery, and confident decisions to support a safe return to health
-              </strong>.
+                Objective monitoring, personalised recovery, and confident decisions to support a
+                safe return to health.
+              </strong>
             </p>
           </div>
           <div className="flex items-center gap-3">
@@ -39,19 +40,18 @@ export default function OurSolutionPage() {
           </div>
         </div>
 
-        {/* “Why it matters” highlight (stay near top) */}
-        <div className="mt-6 grid gap-6">
-          <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-indigo-50 via-white to-blue-50 p-6">
-            <div className="text-xs font-medium text-indigo-700">Why it matters</div>
-            <p className="mt-2 text-sm text-slate-700">
-              Subjective reports aren’t enough. Good2Go delivers <span className="font-medium">objective, defensible data</span> that
-              clinicians and organizations can trust.
-            </p>
-          </div>
+        {/* Why it matters */}
+        <div className="mt-6 rounded-2xl border border-slate-200 bg-gradient-to-br from-indigo-50 via-white to-blue-50 p-6">
+          <div className="text-xs font-medium text-indigo-700">Why it matters</div>
+          <p className="mt-2 text-sm text-slate-700">
+            Subjective reports aren’t enough. Good2Go delivers{" "}
+            <span className="font-medium">objective, defensible data</span> that clinicians and
+            organizations can trust.
+          </p>
         </div>
       </section>
 
-      {/* Healthcare Provider Value Proposition (condensed, punchy cards) */}
+      {/* Healthcare Provider Value Proposition */}
       <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
           Healthcare Provider Value Proposition
@@ -95,104 +95,115 @@ export default function OurSolutionPage() {
             Book an Assessment
           </Link>
           <Link
-            href="/how-it-works"
+            href="/contact"
             className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
           >
-            See How it Works
+            Contact Sales
           </Link>
         </div>
       </section>
 
-    {/* Good2Go Concussion Recovery Dashboard (4 visuals + explanations, 2x2 layout) */}
-<section className="mt-12">
-  <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-center">
-    Good2Go Concussion Recovery Dashboard
-  </h2>
-  <p className="mt-2 text-slate-600 text-center max-w-3xl mx-auto">
-    Visuals that help clinicians and patients track recovery progress with clear, objective metrics.
-  </p>
+      {/* Good2Go Concussion Recovery Dashboard (2x2 grid). First card scrolls horizontally on mobile */}
+      <section className="mt-12">
+        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
+          Good2Go Concussion Recovery Dashboard
+        </h2>
+        <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          {/* Card 1: Current performance — add horizontal scroll on mobile */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <div className="relative w-full h-64 overflow-x-auto">
+              <div className="min-w-[520px] h-64 relative">
+                <Image
+                  src="/demo2-currentperformance.png"
+                  alt="Current performance vs targets"
+                  fill
+                  className="object-contain rounded-lg"
+                />
+              </div>
+            </div>
+            <p className="mt-3 text-sm text-slate-700">
+              These cards show the most recent test scores relative to personalised targets. Balance
+              Score measures postural stability; Gait Speed Score evaluates walking under dual-task
+              conditions; Good2Go Score combines both for overall recovery.
+              <br />
+              <span className="font-medium text-emerald-700">Green</span> = Good2Go;{" "}
+              <span className="font-medium text-amber-600">Orange</span> = monitor;{" "}
+              <span className="font-medium text-rose-600">Red</span> = needs attention.
+            </p>
+          </div>
 
-  {/* Card 1 with horizontal scroll for mobile */}
-<div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-  <div className="relative w-full h-64 overflow-x-auto">
-    <div className="min-w-[500px] h-64 relative">
-      <Image
-        src="/demo2-currentperformance.png"
-        alt="Current performance scores"
-        fill
-        className="object-contain rounded-lg"
-      />
-    </div>
-  </div>
-  <p className="mt-3 text-sm text-slate-700">
-    Cards show most recent test scores relative to targets. 
-    <span className="font-medium text-emerald-600"> Green</span> = Good2Go, 
-    <span className="font-medium text-amber-500"> Orange</span> = monitor closely, 
-    <span className="font-medium text-rose-600"> Red</span> = requires attention.
-  </p>
-</div>
+          {/* Card 2: New norm vs baseline */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <div className="relative w-full h-64">
+              <Image
+                src="/demo2-newnorm-v-baseline.png"
+                alt="New norm versus baseline"
+                fill
+                className="object-contain rounded-lg"
+              />
+            </div>
+            <p className="mt-3 text-sm text-slate-700">
+              Patients can exceed their baseline and establish a{" "}
+              <span className="font-medium">new norm</span>—indicating recovered individual
+              capacity.
+            </p>
+          </div>
 
-    {/* Card 2 */}
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="relative w-full h-64">
-        <Image
-          src="/demo2-newnorm-v-baseline.png"
-          alt="New norm vs baseline"
-          fill
-          className="object-cover rounded-lg"
-        />
-      </div>
-      <p className="mt-3 text-sm text-slate-700">
-        Shows how patients can exceed baseline and establish a 
-        <span className="font-medium"> new norm</span>, 
-        representing recovery of individual capacity.
-      </p>
-    </div>
+          {/* Card 3: Predicted / target speed score */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <div className="relative w-full h-64">
+              <Image
+                src="/demopatient-speedscore.png"
+                alt="Predicted speed score trajectory"
+                fill
+                className="object-contain rounded-lg"
+              />
+            </div>
+            <p className="mt-3 text-sm text-slate-700">
+              Without a baseline, a predicted score + range sets a personalised target. Progress can
+              still be tracked and a new norm established.
+            </p>
+          </div>
 
-    {/* Card 3 */}
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="relative w-full h-64">
-        <Image
-          src="/demopatient-speedscore.png"
-          alt="Patient speed score"
-          fill
-          className="object-cover rounded-lg"
-        />
-      </div>
-      <p className="mt-3 text-sm text-slate-700">
-        Predicted targets are generated if no baseline exists. 
-        This patient is still <span className="font-medium">tracking positively</span> 
-        toward recovery.
-      </p>
-    </div>
+          {/* Card 4: Balance score progress */}
+          <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+            <div className="relative w-full h-64">
+              <Image
+                src="/demopatient-balancescore.png"
+                alt="Balance score progression"
+                fill
+                className="object-contain rounded-lg"
+              />
+            </div>
+            <p className="mt-3 text-sm text-slate-700">
+              Even without a baseline, the patient has reached the target range and is approaching
+              normalisation; once stable, a new norm will be set.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    {/* Card 4 */}
-    <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-      <div className="relative w-full h-64">
-        <Image
-          src="/demopatient-balancescore.png"
-          alt="Patient balance score"
-          fill
-          className="object-cover rounded-lg"
-        />
-      </div>
-      <p className="mt-3 text-sm text-slate-700">
-        Balance score approaching the <span className="font-medium">target range</span>. 
-        When normalised, a new norm is established for continued monitoring.
-      </p>
-    </div>
-  </div>
-</section>
-
-      {/* Sports Organization Value Proposition (unchanged) */}
+      {/* Sports & Workplace value (unchanged structure) */}
       <section className="mt-12 grid gap-6 lg:grid-cols-2">
         <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">Sports Organization Value</h3>
           <ul className="mt-4 grid gap-3 text-sm text-slate-700">
-            <li><span className="font-medium">Participant Safety:</span> Demonstrate commitment with baseline + monitoring.</li>
-            <li><span className="font-medium">Liability Reduction:</span> Defensible documentation for return-to-play.</li>
-            <li><span className="font-medium">Competitive Advantage:</span> Safety excellence drives recruitment & retention.</li>
-            <li><span className="font-medium">Regulatory Alignment:</span> Objective tools that support evolving rules.</li>
+            <li>
+              <span className="font-medium">Participant Safety:</span> Demonstrate commitment with
+              baseline + monitoring.
+            </li>
+            <li>
+              <span className="font-medium">Liability Reduction:</span> Defensible documentation for
+              return-to-play.
+            </li>
+            <li>
+              <span className="font-medium">Competitive Advantage:</span> Safety excellence drives
+              recruitment &amp; retention.
+            </li>
+            <li>
+              <span className="font-medium">Regulatory Alignment:</span> Objective tools that
+              support evolving rules.
+            </li>
           </ul>
           <div className="mt-5">
             <Link
@@ -204,14 +215,25 @@ export default function OurSolutionPage() {
           </div>
         </div>
 
-        {/* Workplace Safety Value Proposition (unchanged) */}
         <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
           <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">Workplace Safety Value</h3>
           <ul className="mt-4 grid gap-3 text-sm text-slate-700">
-            <li><span className="font-medium">Worker Protection:</span> Objective assessment for injury management.</li>
-            <li><span className="font-medium">Compensation Optimization:</span> Defensible evidence for claims & RTW.</li>
-            <li><span className="font-medium">Regulatory Compliance:</span> Aligns with OHS expectations & reporting.</li>
-            <li><span className="font-medium">Insurance Benefits:</span> Support premium reductions via safety programs.</li>
+            <li>
+              <span className="font-medium">Worker Protection:</span> Objective assessment for
+              injury management.
+            </li>
+            <li>
+              <span className="font-medium">Compensation Optimization:</span> Defensible evidence
+              for claims &amp; RTW.
+            </li>
+            <li>
+              <span className="font-medium">Regulatory Compliance:</span> Aligns with OHS
+              expectations &amp; reporting.
+            </li>
+            <li>
+              <span className="font-medium">Insurance Benefits:</span> Support premium reductions
+              via safety programs.
+            </li>
           </ul>
           <div className="mt-5">
             <Link
@@ -224,17 +246,41 @@ export default function OurSolutionPage() {
         </div>
       </section>
 
-      {/* Core Features (colorful, “pop” boxes) */}
+      {/* Core Features */}
       <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
         <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">Core Features</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {[
-            ["Balance Score", "Measures postural stability during dynamic tasks using validated dual task protocols. Detects subtle neurological deficits that traditional balance tests miss.", "bg-emerald-50/70"],
-            ["Gait Speed Score", "Evaluates walking speed under dual task conditions with height adjusted normalisation to capture functional impairment.", "bg-indigo-50/70"],
-            ["Good2Go Score", "Combines balance and gait metrics into a comprehensive recovery score for evidence based decisions.", "bg-amber-50/70"],
-            ["Personalised Protocols", "Accounts for gender based differences and individual baselines to improve clinical accuracy.", "bg-purple-50/70"],
-            ["Progress Tracking", "Longitudinal dashboards visualise recovery trends and milestone achievements over time.", "bg-blue-50/70"],
-            ["Research Validated", "Protocols validated against peer reviewed research with minimum three sources per methodology.", "bg-rose-50/70"],
+            [
+              "Balance Score",
+              "Measures postural stability during dynamic tasks using validated dual task protocols. Detects subtle neurological deficits that traditional balance tests miss.",
+              "bg-emerald-50/70",
+            ],
+            [
+              "Gait Speed Score",
+              "Evaluates walking speed under dual task conditions with height adjusted normalisation to capture functional impairment.",
+              "bg-indigo-50/70",
+            ],
+            [
+              "Good2Go Score",
+              "Combines balance and gait metrics into a comprehensive recovery score for evidence based decisions.",
+              "bg-amber-50/70",
+            ],
+            [
+              "Personalised Protocols",
+              "Accounts for gender based differences and individual baselines to improve clinical accuracy.",
+              "bg-purple-50/70",
+            ],
+            [
+              "Progress Tracking",
+              "Longitudinal dashboards visualise recovery trends and milestone achievements over time.",
+              "bg-blue-50/70",
+            ],
+            [
+              "Research Validated",
+              "Protocols validated against peer reviewed research with minimum three sources per methodology.",
+              "bg-rose-50/70",
+            ],
           ].map(([title, body, bg], i) => (
             <div key={i} className={`rounded-2xl border border-slate-200 ${bg} p-6`}>
               <div className="text-base font-semibold">{title}</div>
@@ -244,7 +290,7 @@ export default function OurSolutionPage() {
         </div>
       </section>
 
-      {/* Image placeholders (solution1 & solution2) */}
+      {/* Two solution images under Core Features */}
       <section className="mt-12 grid gap-4 sm:grid-cols-2">
         <div className="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50">
           <div className="relative w-full h-64">
@@ -269,25 +315,14 @@ export default function OurSolutionPage() {
           </div>
         </div>
       </section>
-      
-      {/* Final platform section (moved to bottom as requested) */}
-      <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
-        <p className="text-slate-700 leading-relaxed">
-          Good2Go’s AI-Enhanced Dual-Task Gait Technology platform represents a transformational opportunity in the global
-          concussion management market, uniquely positioned as the world's only comprehensive solution for objective
-          post-concussion recovery tracking and proactive baseline assessment.
-        </p>
-        <p className="mt-4 text-slate-700 leading-relaxed">
-          Research demonstrating gender-based differences in dual-task gait recovery patterns indicates clear opportunities for
-          personalised assessment and monitoring approaches that could provide superior clinical value.
-        </p>
-        <p className="mt-4 text-slate-700 leading-relaxed">
-          Good2Go is a Clinical Decision Support tool that proposition addresses critical unmet needs in concussion management
-          while providing competitive advantages and liability reduction for healthcare practitioners.
-        </p>
 
-        {/* Bottom CTAs */}
-        <div className="mt-6 flex items-center gap-3">
+      {/* Final CTA */}
+      <section className="mt-12 rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-50 via-white to-indigo-50 p-6 sm:p-8 text-center">
+        <h3 className="text-xl font-semibold tracking-tight">Ready to see it in action?</h3>
+        <p className="mt-2 text-slate-700">
+          Explore the workflow and how Good2Go supports evidence-based recovery.
+        </p>
+        <div className="mt-5 flex items-center justify-center gap-3">
           <Link
             href="/how-it-works"
             className="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
@@ -301,6 +336,26 @@ export default function OurSolutionPage() {
             Book an Assessment
           </Link>
         </div>
+      </section>
+
+      {/* Strategy block — moved to very bottom */}
+      <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
+        <p className="text-slate-700 leading-relaxed">
+          Good2Go’s AI-Enhanced Dual-Task Gait Technology platform represents a transformational
+          opportunity in the global concussion management market, uniquely positioned as the world's
+          only comprehensive solution for objective post-concussion recovery tracking and proactive
+          baseline assessment.
+        </p>
+        <p className="mt-4 text-slate-700 leading-relaxed">
+          Research demonstrating gender-based differences in dual-task gait recovery patterns
+          indicates clear opportunities for personalised assessment and monitoring approaches that
+          could provide superior clinical value.
+        </p>
+        <p className="mt-4 text-slate-700 leading-relaxed">
+          Good2Go is a Clinical Decision Support tool that proposition addresses critical unmet
+          needs in concussion management while providing competitive advantages and liability
+          reduction for healthcare practitioners.
+        </p>
       </section>
     </main>
   );
