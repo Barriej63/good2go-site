@@ -113,7 +113,7 @@ export default function OurSolutionPage() {
           <div className="rounded-2xl border border-slate-200 bg-white p-4">
             <div className="relative w-full overflow-hidden rounded-xl border border-slate-200">
               <Image
-                src="/demo2-currentperformance.png"
+                src="/demo2 currentperformance.png"
                 alt="Current performance dashboard cards"
                 width={1200}
                 height={800}
@@ -205,32 +205,6 @@ export default function OurSolutionPage() {
         </div>
       </section>
 
-      {/* Image placeholders (solution1 & solution2) */}
-      <section className="mt-12 grid gap-4 sm:grid-cols-2">
-        <div className="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50">
-          <div className="relative w-full h-64">
-            <Image
-              src="/solution1.webp"
-              alt="Good2Go solution visual 1"
-              fill
-              className="object-cover"
-              priority={false}
-            />
-          </div>
-        </div>
-        <div className="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50">
-          <div className="relative w-full h-64">
-            <Image
-              src="/solution2.jpg"
-              alt="Good2Go solution visual 2"
-              fill
-              className="object-cover"
-              priority={false}
-            />
-          </div>
-        </div>
-      </section>
-
       {/* Sports Organization Value Proposition (unchanged) */}
       <section className="mt-12 grid gap-6 lg:grid-cols-2">
         <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
@@ -291,6 +265,32 @@ export default function OurSolutionPage() {
         </div>
       </section>
 
+      {/* Image placeholders (solution1 & solution2) */}
+      <section className="mt-12 grid gap-4 sm:grid-cols-2">
+        <div className="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50">
+          <div className="relative w-full h-64">
+            <Image
+              src="/solution1.webp"
+              alt="Good2Go solution visual 1"
+              fill
+              className="object-cover"
+              priority={false}
+            />
+          </div>
+        </div>
+        <div className="rounded-2xl border border-slate-200 overflow-hidden bg-slate-50">
+          <div className="relative w-full h-64">
+            <Image
+              src="/solution2.jpg"
+              alt="Good2Go solution visual 2"
+              fill
+              className="object-cover"
+              priority={false}
+            />
+          </div>
+        </div>
+      </section>
+      
       {/* Final platform section (moved to bottom as requested) */}
       <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
         <p className="text-slate-700 leading-relaxed">
