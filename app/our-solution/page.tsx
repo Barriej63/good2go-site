@@ -57,7 +57,7 @@ export default function OurSolutionPage(): JSX.Element {
           Healthcare Provider Value Proposition
         </h2>
         <p className="mt-3 text-slate-700">
-          Eliminate uncertainty, reduce liability, and make confident return-to-activity decisions.
+          Eliminate uncertainty, may reduce liability, and make confident return-to-activity decisions.
         </p>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -186,14 +186,14 @@ export default function OurSolutionPage(): JSX.Element {
       {/* Sports & Workplace value (unchanged structure) */}
       <section className="mt-12 grid gap-6 lg:grid-cols-2">
         <div className="rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
-          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">Sports Organization Value</h3>
+          <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">Sports Organisation Value</h3>
           <ul className="mt-4 grid gap-3 text-sm text-slate-700">
             <li>
               <span className="font-medium">Participant Safety:</span> Demonstrate commitment with
               baseline + monitoring.
             </li>
             <li>
-              <span className="font-medium">Liability Reduction:</span> Defensible documentation for
+              <span className="font-medium">Liability Reduction:</span> Defensible evidence for
               return-to-play.
             </li>
             <li>
@@ -201,7 +201,7 @@ export default function OurSolutionPage(): JSX.Element {
               recruitment &amp; retention.
             </li>
             <li>
-              <span className="font-medium">Regulatory Alignment:</span> Objective tools that
+              <span className="font-medium">Regulatory Alignment:</span> Objective tools that may
               support evolving rules.
             </li>
           </ul>
@@ -223,7 +223,7 @@ export default function OurSolutionPage(): JSX.Element {
               injury management.
             </li>
             <li>
-              <span className="font-medium">Compensation Optimization:</span> Defensible evidence
+              <span className="font-medium">Compensation Optimisation:</span> Defensible evidence
               for claims &amp; RTW.
             </li>
             <li>
@@ -231,7 +231,7 @@ export default function OurSolutionPage(): JSX.Element {
               expectations &amp; reporting.
             </li>
             <li>
-              <span className="font-medium">Insurance Benefits:</span> Support premium reductions
+              <span className="font-medium">Insurance Benefits:</span> Could influence premium reductions
               via safety programs.
             </li>
           </ul>
