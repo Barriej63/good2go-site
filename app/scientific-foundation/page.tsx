@@ -76,7 +76,7 @@ export default function ScientificFoundationPage() {
             ["Predictive Power", "Persistent dual-task costs correlate with higher risk of subsequent injury."],
             ["Real-World Fit", "Dual-task mirrors everyday cognitive-motor demands, improving return-to-activity decisions."],
             ["Objective Metrics", "Standardized, quantifiable outcomes reduce subjectivity and variability."],
-            ["Cognitive-Motor Insight", "Dissociation patterns inform prognosis and individualized rehab planning."],
+            ["Cognitive-Motor Insight", "Are tasks like dynamic walking or complex sports movements, still affected. "],
             ["Technology-Ready", "Sensor-based protocols enable reliable, scalable implementations."],
           ].map(([title, body], i) => (
             <div key={i} className="rounded-2xl border border-slate-200 bg-white p-6">
