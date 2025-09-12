@@ -20,9 +20,9 @@ export default function ScientificFoundationPage() {
               Scientific Foundation
             </h1>
             <p className="mt-3 text-lg text-slate-700 leading-relaxed">
-              Good2Go’s dual-task gait assessment delivers clinicians
-              <span className="font-medium"> unprecedented insight</span> into cognitive-motor integration,
-              objective recovery status, and even <span className="font-medium">future outcome prediction</span>.
+              Good2Go’s dual-task gait assessment gives healthcare providers
+              <span className="font-medium"> unprecedented insight</span> into recovery status, 
+              and <span className="font-medium">immediate pointers to interventions</span>.
               The research base shows superior sensitivity vs. traditional methods and
               objective, quantifiable markers that map to real-world function.
             </p>
@@ -66,9 +66,8 @@ export default function ScientificFoundationPage() {
           Extensive peer-reviewed literature shows dual-task gait provides
           <span className="font-medium"> superior sensitivity</span>, <span className="font-medium">predictive validity</span>, and
           <span className="font-medium"> ecological relevance</span> compared with single-task tests. It yields
-          objective scores that eliminate subjectivity and standardize assessment across contexts.
-          Emerging evidence on <span className="font-medium">cognitive-motor dissociation</span> indicates that preserved cognition
-          despite motor impairment can be a <span className="font-medium">positive prognostic indicator</span>, refining clinical decision-making.
+          objective scores that eliminate subjectivity and standardise assessment across contexts,
+          refining clinical decision-making.
         </p>
 
         <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -117,28 +116,6 @@ export default function ScientificFoundationPage() {
               className="object-cover"
             />
           </div>
-        </div>
-      </section>
-
-      {/* CLINICAL IMPLEMENTATION RECOMMENDATIONS */}
-      <section className="mt-12 rounded-3xl border border-slate-200 bg-white p-6 sm:p-10">
-        <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-          Clinical Implementation Recommendations
-        </h2>
-        <div className="mt-6 grid gap-4 lg:grid-cols-2">
-          {[
-            ["Integrate into Protocols", "Use dual-task alongside symptoms, neuropsych testing, and clinical exam for comprehensive evaluation."],
-            ["Standardize Methods", "Adopt validated protocols with consistent cognitive tasks, gait parameters, and environments."],
-            ["Leverage Technology", "Use sensor-based systems to obtain objective measures and normative comparisons."],
-            ["Train & Maintain", "Ensure clinicians are trained on theory, admin, interpretation; refresh periodically."],
-            ["Serial Monitoring", "Track over time to map trajectories, adjust care, and confirm readiness for activity."],
-            ["Ecological Focus", "Prioritize tasks mirroring real-world dual-demand scenarios relevant to patient goals."],
-          ].map(([title, body], i) => (
-            <div key={i} className="rounded-2xl border border-slate-200 bg-indigo-50/60 p-6">
-              <div className="text-base font-semibold">{title}</div>
-              <p className="mt-3 text-sm leading-relaxed text-slate-700">{body}</p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -274,7 +251,7 @@ export default function ScientificFoundationPage() {
         <p className="mt-3 text-slate-700 leading-relaxed">
           Dual-task gait represents a <span className="font-medium">paradigm shift</span> in concussion care:
           it detects persistent deficits, predicts outcomes, and quantifies recovery with objective,
-          standardized metrics. Integrating dual-task into routine protocols can improve outcomes,
+          standardised metrics. Integrating dual-task into routine protocols can improve outcomes,
           refine return-to-activity decisions, and reduce risk of long-term complications.
         </p>
         <div className="mt-5 flex flex-wrap gap-3">
