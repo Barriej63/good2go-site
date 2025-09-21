@@ -156,7 +156,7 @@ export default function OurSolutionPage(): JSX.Element {
           <div className="rounded-2xl border border-slate-200 bg-amber-50/70 p-5">
             <div className="text-sm font-medium text-amber-800">Clinical Decision Support</div>
             <p className="mt-2 text-sm text-amber-900">
-              Expert-level assessment guidance that supports compliance and reduces risk.
+              Expert-level assessment guidance that supports every patient and reduces risk.
             </p>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-rose-50/70 p-5">
@@ -212,7 +212,7 @@ export default function OurSolutionPage(): JSX.Element {
           <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-5">
             <div className="text-sm font-medium text-amber-900">Guided, safer progression</div>
             <p className="mt-2 text-sm text-amber-900">
-              The Good2Go assessments reveal these differences so clinicians can tailor coaching and
+              The Good2Go assessments reveal these differences so Healthcare providers can 
               progress patients safely toward normalisation.
             </p>
           </div>
