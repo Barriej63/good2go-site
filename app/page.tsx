@@ -60,7 +60,7 @@ export default function Page(): JSX.Element {
               </p>
 
               <ul className="mt-6 grid gap-3 text-sm text-slate-700">
-                <li className="flex items-center gap-2">🌍 220,000 — Annual concussions in NZ & Austraila across sports, workplace, and home environments</li>
+                <li className="flex items-center gap-2">🌍 220,000 — Annual concussions in NZ & Australia across sports, workplace, and home environments</li>
                 <li className="flex items-center gap-2">🏅 1/3rd — Only one thrid of concussions are from sports, falls from everyday activities are the primary driver</li>
                 <li className="flex items-center gap-2">💵 $1.1 Billion — Estimated economic burden created by concussions in NZ & Australia (ACC & Austin Group)</li>
                 <li className="flex items-center gap-2">🙈 15-24 — Individuals in this age group have the highest rates of concussion</li>
