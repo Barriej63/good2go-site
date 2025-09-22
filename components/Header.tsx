@@ -6,6 +6,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import RouteReturnHome from "./RouteReturnHome";
 
+const PATIENT_DASHBOARD_URL = "https://patients.good2go-rth.com";
+
 const nav = [
   { href: "/dilemma", label: "Dilemma" },
   { href: "/our-solution", label: "Our Solution" },
@@ -14,6 +16,8 @@ const nav = [
   { href: "/our-why", label: "Our Why" },
   { href: "/pricing", label: "Pricing" },
   { href: "/contact", label: "Contact" },
+  // New Patient Dashboard link (external)
+  { href: PATIENT_DASHBOARD_URL, label: "Patient Dashboard", external: true, cta: true },
   { href: "https://book.good2go-rth.com", label: "Book", external: true },
 ];
 
@@ -45,18 +49,25 @@ export default function Header() {
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-7 text-sm">
           {nav.map((item) => {
+            const isCta = (item as any).cta;
             const active = !item.external && pathname === item.href;
+
             const base = "transition-colors";
-            const classes = active
+            const textClasses = active
               ? "text-slate-900 font-medium"
               : "text-slate-600 hover:text-slate-900";
 
+            const ctaClasses =
+              "inline-flex items-center gap-2 rounded-lg bg-slate-900 px-3 py-2 text-sm font-medium text-white hover:bg-slate-800";
+
+            const className = isCta ? ctaClasses : `${base} ${textClasses}`;
+
             return item.external ? (
-              <a key={item.href} href={item.href} className={`${base} ${classes}`}>
+              <a key={item.href} href={item.href} className={className}>
                 {item.label}
               </a>
             ) : (
-              <Link key={item.href} href={item.href} className={`${base} ${classes}`}>
+              <Link key={item.href} href={item.href} className={className}>
                 {item.label}
               </Link>
             );
@@ -114,18 +125,25 @@ export default function Header() {
       >
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-3 space-y-1">
           {nav.map((item) => {
+            const isCta = (item as any).cta;
             const active = !item.external && pathname === item.href;
+
             const base =
               "block rounded-md px-3 py-2 text-base font-medium transition-colors";
-            const classes = active
+            const textClasses = active
               ? "text-slate-900 bg-slate-100"
               : "text-slate-700 hover:bg-slate-100";
+
+            const ctaClasses =
+              "block rounded-lg px-3 py-2 text-base font-semibold text-white bg-slate-900 hover:bg-slate-800";
+
+            const className = isCta ? ctaClasses : `${base} ${textClasses}`;
 
             return item.external ? (
               <a
                 key={item.href}
                 href={item.href}
-                className={`${base} ${classes}`}
+                className={className}
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -134,7 +152,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`${base} ${classes}`}
+                className={className}
                 onClick={() => setOpen(false)}
               >
                 {item.label}
