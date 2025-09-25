@@ -45,8 +45,6 @@ export default function OurSolutionPage(): JSX.Element {
           <div className="text-xs font-medium text-indigo-700">Why it matters</div>
           <p className="mt-2 text-sm text-slate-700">
             <span className="font-medium">We help solve the answer to the question's "When can I return?", "Have I recovered?", "Is it safe for me to go back?".
-               </li>
-            <li>
             <span className="font-medium">Subjective reports aren’t enough. Good2Go delivers{" "}objective, defensible data</span> that clinicians and
             organizations can trust.
           </p>
